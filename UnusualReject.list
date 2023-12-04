@@ -3,3 +3,4 @@ DOMAIN,waapdg.jd.com
 DOMAIN,dns.weixin.qq.com:443
 DOMAIN,dns.weixin.qq.com:8080
 DOMAIN,dns.weixin.qq.com:80
+IP-CIDR,180.76.76.200/32
