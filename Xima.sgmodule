@@ -29,4 +29,4 @@ ximalaya_json4=type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/discovery
 ximalaya_json5=type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
 
 [MITM]
-hostname = %APPEND% *.xima*.*
+hostname = %APPEND% *.xima*.*, *.xmcdn.*
