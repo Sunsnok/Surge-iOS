@@ -27,3 +27,6 @@ ximalaya_json2=type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/focus-mob
 ximalaya_json3=type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
 ximalaya_json4=type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
 ximalaya_json5=type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
+
+[MITM]
+hostname = %APPEND% *.xima*.*
