@@ -1,3 +1,6 @@
+#!name=喜马拉雅
+#!desc=全面净化
+
 [URL Rewrite]
 ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF _ reject
 ^https?:\/\/.*\.xima.*\.com\/mobile-playpage\/view\/ _ reject
