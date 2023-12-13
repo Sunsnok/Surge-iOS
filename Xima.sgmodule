@@ -1,0 +1,26 @@
+[URL Rewrite]
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF _ reject
+^https?:\/\/.*\.xima.*\.com\/mobile-playpage\/view\/ _ reject
+^https?:\/\/.*\.xima.*\.com\/chaos-notice-web\/v1\/message\/preview\/list _ reject
+^https?:\/\/.*\.xima.*\.com\/social-web\/bottomTabs\/dynamicEntrance\/status _ reject
+^https?:\/\/.*\.xmcdn\.com\/\w{8}\/\w{4}-\w{16}\/.+gif$ _ reject
+^https?:\/\/gslb.*\.xima.*\.com\/ _ reject
+^https?:\/\/.*\.xima.*\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) _ reject
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/isShowUserGiftPendant _ reject
+^https?:\/\/.*\.xima.*\.com\/mobile-user\/unread _ reject
+^https?:\/\/.*\.xima.*\.com/mobile-user/minorProtection/pop _ reject
+^https?:\/\/.*\.xima.*\.com\/collector\/xl\/v\d _ reject
+^https?:\/\/.*\.xima.*\.com\/butler-portal\/versionCheck _ reject
+^https?:\/\/(adse\.wsa|adse|adbehavior|xdcs-collector)\.xima.*\.com\/.* _ reject
+^https?:\/\/.*\.xima.*\.com\/mobile\/discovery\/v\d\/location _ reject
+^https?:\/\/.*\.xima.*\.com\/hotWord _ reject
+^https?:\/\/.*\.xima.*\.com\/(hub)?guideWord _ reject
+^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime _ reject
+^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? _ reject
+
+[Script]
+ximalaya_json=type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
+ximalaya_json2=type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/focus-mobile\/focusPic,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
+ximalaya_json3=type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
+ximalaya_json4=type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
+ximalaya_json5=type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
