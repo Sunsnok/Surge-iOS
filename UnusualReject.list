@@ -8,10 +8,12 @@ DOMAIN,app-site-association.cdn-apple.com
 # > 🆕 拒绝国家反诈中心请求
 DOMAIN-SUFFIX,gjfzpt.cn
 
-#规则数量:148
+#规则数量:153
 #不支持的规则数量:0
 #已排除的规则数量:0
+
 #-----------------以下为解析后的规则-----------------#
+
 DOMAIN,ossgw.alicdn.com
 DOMAIN,ems.youku.com
 DOMAIN,hudong.alicdn.com
@@ -70,12 +72,14 @@ DOMAIN-KEYWORD,pangolin.snssdk.com
 DOMAIN-KEYWORD,pglstatp-toutiao
 DOMAIN-KEYWORD,video-cn.snssdk.com
 DOMAIN-SUFFIX,ehaier.com
+DOMAIN,hdns.ksyun.com
 DOMAIN-KEYWORD,httpdns.,extended-matching
 DOMAIN-KEYWORD,httpdns-,extended-matching
 DOMAIN-KEYWORD,adv.ccb.com
 DOMAIN,dns.jd.com
 IP-CIDR,101.124.19.122/32,no-resolve
 IP-CIDR6,2402:db40:5100:1011::5/128,no-resolve
+DOMAIN,api.liquidlink.cn
 DOMAIN,ad.tencentmusic.com
 DOMAIN,g.koowo.com
 DOMAIN,mobilead.kuwo.cn
@@ -100,6 +104,7 @@ DOMAIN,al-log.d.meituan.net
 DOMAIN,babel-statistics-android.d.meituan.net
 DOMAIN,maplocatesdksnapshot.d.meituan.net
 DOMAIN,metrics-picture.d.meituan.net
+DOMAIN,open.kuaishouzt.com
 DOMAIN,route-stats.d.meituan.net
 DOMAIN,aaid.uyunad.com
 DOMAIN,adui.tg.meitu.com
@@ -116,7 +121,6 @@ DOMAIN,ios.video.mpush.qq.com
 DOMAIN,otheve.beacon.qq.com
 DOMAIN,pgdt.gtimg.cn
 DOMAIN,tpns.qq.com
-DOMAIN,vv6.video.qq.com
 DOMAIN-SUFFIX,gdt.qq.com
 DOMAIN-SUFFIX,l.qq.com
 DOMAIN-KEYWORD,trace.qq.com
@@ -126,6 +130,8 @@ DOMAIN,iadmat.nosdn.127.net
 DOMAIN,iadmatapk.nosdn.127.net
 DOMAIN,iadmusicmat.music.126.net
 DOMAIN,iadmusicmatvideo.music.126.net
+DOMAIN,ipv4.music.163.com,extended-matching
+DOMAIN,ipv6.music.163.com,extended-matching
 DOMAIN-SUFFIX,163jiasu.com,extended-matching
 DOMAIN-SUFFIX,biz.weibo.com
 DOMAIN,sdkconfig.ad.xiaomi.com
@@ -135,6 +141,7 @@ DOMAIN,amdc.m.youku.com
 DOMAIN,api.sm.cn
 DOMAIN,apiv4-iyes.youku.com
 DOMAIN,baichuan-sdk.alicdn.com
+DOMAIN,cad.youku.com
 DOMAIN,huichuan-mc.sm.cn
 DOMAIN,huichuan.sm.cn
 DOMAIN,iyes.youku.com
