@@ -1,8 +1,6 @@
 #!name=微博
 #!desc=全面净化
-
-[MITM]
-hostname = %APPEND% *.weibo.cn, *.weibo.com, weibo.com
+#!author=RuCu6 zmqcherish
 
 [URL Rewrite]
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php|sdkconfig\.php) - reject
@@ -59,7 +57,5 @@ weibo = type=http-response, pattern=^https:\/\/wbapp\.uve\.weibo\.com\/(preload\
 # 会员图标
 weibo = type=http-response, pattern=^https:\/\/new\.vip\.weibo\.cn\/aj\/appicon\/list\?, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js, requires-body=true, max-size=-1, timeout=60
 
-# 跳过重定向页面以直接访问 //weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn
-# noRedirect_48 = type=http-request, pattern=^https:\/\/weibo\.cn\/sinaurl\?(.*&)?(u|toasturl|goto)=, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js, script-update-interval=0, timeout=60
-# noRedirect_49 = type=http-request, pattern=^https:\/\/shop\.sc\.weibo\.com\/h5\/jump\/error\?(.*&)?url=, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js, script-update-interval=0, timeout=60
-# noRedirect_50 = type=http-response, pattern=^https:\/\/(sinaurl|t)\.cn\/, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js, script-update-interval=0, timeout=60
+[MITM]
+hostname = %APPEND% *.weibo.cn, *.weibo.com, weibo.com
