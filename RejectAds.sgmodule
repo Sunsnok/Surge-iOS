@@ -1,7 +1,7 @@
 #!name=MyBlockAds
 #!desc=去广告合集，以下app请使用单独配置文件：高德地图,哔哩哔哩,网易云音乐,微博,YouTube,知乎
 #!author=RuCu6
-#!update=2024-01-21 08:50
+#!update=2024-02-19 10:10
 
 [URL Rewrite]
 # 58同城 //*.58cdn.com.cn, app.58.com, pic?.ajkimg.com
@@ -103,8 +103,9 @@
 ^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 [Script]
-# 12306 开屏广告 //ad.12306.cn
-12306 = type=http-request, pattern=^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/12306.js, requires-body=true, max-size=-1, timeout=60
+# 12306 //ad.12306.cn, mobile.12306.cn
+12306 = type=http-request, pattern=^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/12306.js, requires-body=true, max-size=-1, timeout=60
+header = type=http-response, pattern=^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, timeout=60
 
 # amdc
 header = type=http-response, pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, timeout=60
@@ -116,6 +117,9 @@ myBlockAds = type=http-response, pattern=^https:\/\/poplayer\.template\.alibaba\
 baiduCloud = type=http-response, pattern=^https:\/\/pan\.baidu\.com\/api\/getsyscfg\?, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js, requires-body=true, max-size=-1, timeout=60
 baiduCloud = type=http-response, pattern=^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js, requires-body=true, max-size=-1, timeout=60
 
+# 草榴社区 //2023.redircdn.com
+myBlockAds = type=http-response, pattern=^https:\/\/2023\.redircdn\.com\/web\/mob_post\.js\?, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body=true, max-size=-1, timeout=60
+
 # JavDB //api.hechuangxinxi.xyz, jdforrepam.com
 myBlockAds = type=http-response, pattern=^https:\/\/(api\.hechuangxinxi\.xyz|jdforrepam\.com)\/api\/(v1\/(ads|startup|users)|v4\/movies\/\w+), script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body=true, max-size=-1, timeout=60
 javdb = type=http-request, pattern=^https:\/\/(api\.hechuangxinxi\.xyz|jdforrepam\.com)\/api\/v1\/movies\/\w+\/play\?, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/javdb.js, timeout=60
@@ -126,7 +130,7 @@ noRedirect = type=http-request, pattern=^https:\/\/www\.jianshu\.com\/go-wild\?a
 jingdong = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jingdong.js, requires-body=true, max-size=-1, timeout=60
 
 # 京东极速版 //api.m.jd.com
-#replaceBody = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=jdLiteAdvertisingVO->rucu6
+#replaceBody = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=jdLiteAdvertisingVO-%3Erucu6
 
 # 酷安 //api.coolapk.com
 coolapk = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\?, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js, requires-body=true, max-size=-1, timeout=60
@@ -150,5 +154,9 @@ wechat110 = type=http-response, pattern=^https\:\/\/(weixin110\.qq|security\.wec
 ## 开屏广告
 myBlockAds = type=http-response, pattern=^https:\/\/api\.m\.mi\.com\/v1\/(app\/start|order\/expressView), script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body=true, max-size=-1, timeout=60
 
+# 中国移动云盘 //ad.mcloud.139.com, jzts.cmpassport.com
+cloud139 = type=http-response, pattern=^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cloud139.js, requires-body=true, max-size=-1, timeout=60
+cloud139 = type=http-response, pattern=^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cloud139.js, requires-body=true, max-size=-1, timeout=60
+
 [MITM]
-hostname = %APPEND% ad.12306.cn, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, gw.aihuishou.com, list-app-m.i4.cn, api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, update.pan.baidu.com, api.chelaile.net.cn, web.chelaile.net.cn, app-gw.csdn.net, api.douban.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, api.hechuangxinxi.xyz, jdforrepam.com, links.jianshu.com, www.jianshu.com, api.m.jd.com, gab.122.gov.cn, res.kfc.com.cn, api.coolapk.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, ssp.soulapp.cn, tiebac.baidu.com, gw.m.163.com, nex.163.com, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.m.mi.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, client.app.coc.10086.cn
+hostname = %APPEND% ad.12306.cn, mobile.12306.cn, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, gw.aihuishou.com, list-app-m.i4.cn, api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, update.pan.baidu.com, 2023.redircdn.com, api.chelaile.net.cn, web.chelaile.net.cn, app-gw.csdn.net, api.douban.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, image.mybank.icbc.com.cn, api.hechuangxinxi.xyz, jdforrepam.com, links.jianshu.com, www.jianshu.com, api.m.jd.com, gab.122.gov.cn, res.kfc.com.cn, api.coolapk.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, ssp.soulapp.cn, tiebac.baidu.com, gw.m.163.com, nex.163.com, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.m.mi.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, client.app.coc.10086.cn, ad.mcloud.139.com, jzts.cmpassport.com
