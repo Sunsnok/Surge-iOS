@@ -1,7 +1,7 @@
 #!name=MyBlockAds
-#!desc=去广告合集，以下app请使用单独配置文件：高德地图,哔哩哔哩,网易云音乐,微博,YouTube,知乎
+#!desc=去广告合集, 以下app请使用单独配置文件: 高德地图,哔哩哔哩,网易云音乐,微博,YouTube,知乎
 #!author=RuCu6
-#!update=2024-02-19 17:25
+#!update=2024-03-01 11:25
 
 [URL Rewrite]
 # 58同城 //*.58cdn.com.cn, app.58.com, pic?.ajkimg.com
@@ -78,6 +78,7 @@
 ^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_73\.json data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 # Soul //ssp.soulapp.cn
