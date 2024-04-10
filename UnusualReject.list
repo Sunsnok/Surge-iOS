@@ -3,8 +3,6 @@ DOMAIN,dns.weixin.qq.com:8080
 DOMAIN,dns.weixin.qq.com:80
 # > Safari 防跳转
 DOMAIN,app-site-association.cdn-apple.com
-# > 🆕 拒绝国家反诈中心请求
-DOMAIN-SUFFIX,gjfzpt.cn
 
 #规则数量:170
 #不支持的规则数量:0
