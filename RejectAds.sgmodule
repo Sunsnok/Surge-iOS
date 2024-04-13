@@ -1,7 +1,7 @@
 #!name=RejectAds
 #!desc=去广告合集, 以下app请使用单独配置文件: 高德地图,哔哩哔哩,网易云音乐,微博,YouTube,知乎
 #!author=RuCu6
-#!update=2024-04-07 22:30
+#!update=2024-04-13 17:00
 
 [URL Rewrite]
 # 58同城 //*.58cdn.com.cn, app.58.com, pic?.ajkimg.com
@@ -92,7 +92,6 @@
 ^https:\/\/osg-service\.sgcc\.com\.cn:18600\/emss-pfa-appset-front\/bootpageoutter\/ data-type=text data="{}" status-code=200
 
 # 微信 //mp.weixin.qq.com
-^http:\/\/[\d\.]+(:49155)?\/finderpdd\.video\.qq\.com\/\d+\/\d+\/stodownload\? data-type=text data="{}" status-code=200
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|masonryfeed|relatedarticle)\? data-type=text data="{}" status-code=200
 ^https:\/\/shop-api\.retail\.mi\.com\/mtop\/navi\/skywheel\/mishop\/splash data-type=text data="{}" status-code=200
 
@@ -146,10 +145,10 @@ coolapk = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/main\/(d
 coolapk = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\?, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js, requires-body=true, max-size=-1, timeout=60
 
 # 贴吧全面去广告 //tiebac.baidu.com
-# tiebaJson = type=http-response, pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)$, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js, requires-body=true, max-size=-1, timeout=60
-# tiebaProto = type=http-response, pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)\?cmd, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaProto.js, requires-body=true, binary-body-mode=true, max-size=-1, timeout=60
-# tiebaJson = type=http-response, pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/s\/sync$, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js, requires-body=true, max-size=-1, timeout=60
-# tiebaJson = type=http-response, pattern=^https:\/\/tiebac\.baidu\.com\/tiebaads\/commonbatch\?, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js, requires-body=true, max-size=-1, timeout=60
+tiebaJson = type=http-response, pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)$, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js, requires-body=true, max-size=-1, timeout=60
+tiebaProto = type=http-response, pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)\?cmd, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaProto.js, requires-body=true, binary-body-mode=true, max-size=-1, timeout=60
+tiebaJson = type=http-response, pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/s\/sync$, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js, requires-body=true, max-size=-1, timeout=60
+tiebaJson = type=http-response, pattern=^https:\/\/tiebac\.baidu\.com\/tiebaads\/commonbatch\?, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js, requires-body=true, max-size=-1, timeout=60
 
 # 网易新闻 //gw.m.163.com, nex.163.com
 news163 = type=http-response, pattern=^https:\/\/gw\.m\.163\.com\/nc\/api\/v1\/feed\/dynamic\/headline-list\?, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/news163.js, requires-body=true, max-size=-1, timeout=60
