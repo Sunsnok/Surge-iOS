@@ -4,7 +4,7 @@ DOMAIN,dns.weixin.qq.com:80
 # > Safari 防跳转
 DOMAIN,app-site-association.cdn-apple.com
 
-#规则数量:170
+#规则数量:168
 #不支持的规则数量:0
 #已排除的规则数量:0
 
@@ -144,8 +144,6 @@ DOMAIN,ipv6.music.163.com,extended-matching
 DOMAIN-SUFFIX,163jiasu.com,extended-matching
 DOMAIN,huodong.weibo.cn
 DOMAIN-SUFFIX,biz.weibo.com
-DOMAIN,finderks.video.qq.com
-DOMAIN,finderv1.video.qq.com
 DOMAIN,wxsnsdy.wxs.qq.com
 DOMAIN,wxsnsdythumb.wxs.qq.com
 DOMAIN,sdkconfig.ad.xiaomi.com
