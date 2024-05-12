@@ -1,7 +1,7 @@
 #!name=RejectAds
 #!desc=去广告合集, 以下app请使用单独配置文件: 高德地图,哔哩哔哩,网易云音乐,微博,YouTube,知乎
 #!author=RuCu6
-#!update=2024-04-21 03:15
+#!update=2024-05-11 18:50
 
 [URL Rewrite]
 # 58同城 //*.58cdn.com.cn, app.58.com, pic?.ajkimg.com
@@ -93,7 +93,7 @@
 
 # 微信 //mp.weixin.qq.com
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|masonryfeed|relatedarticle)\? data-type=text data="{}" status-code=200
-^https:\/\/shop-api\.retail\.mi\.com\/mtop\/navi\/skywheel\/mishop\/splash data-type=text data="{}" status-code=200
+^https:\/\/shop-api\.retail\.mi\.com\/mtop\/navi\/(rec\/merge\/|skywheel\/mishop\/splash) data-type=text data="{}" status-code=200
 
 ## 搜索框,热词,卡片
 ^https:\/\/api\.m\.mi\.com\/v1\/app\/popup_info$ data-type=text data="{}" status-code=200
