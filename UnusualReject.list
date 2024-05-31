@@ -4,10 +4,10 @@ DOMAIN,dns.weixin.qq.com:80
 # > Safari 防跳转
 DOMAIN,app-site-association.cdn-apple.com
 
-#规则数量:177
+#规则数量:181
 #不支持的规则数量:0
 #已排除的规则数量:0
-#2024-5-18
+2024-05-31
 #-----------------以下为解析后的规则-----------------#
 
 DOMAIN,dns.alidns.com
@@ -156,6 +156,10 @@ DOMAIN-SUFFIX,biz.weibo.com
 DOMAIN,wxsnsdy.wxs.qq.com
 DOMAIN,wxsnsdythumb.wxs.qq.com
 DOMAIN,sdkconfig.ad.xiaomi.com
+DOMAIN,3117kc.saigmpl.com
+DOMAIN,314240585f1fb7266kcc.fwxhvvd.com
+DOMAIN,314240585f1fb7266kg.oiocklg.com
+DOMAIN,tong.8888888888.bid
 DOMAIN,acs4baichuan.m.taobao.com
 DOMAIN,adsmind.ugdtimg.com
 DOMAIN,amdc.m.youku.com
