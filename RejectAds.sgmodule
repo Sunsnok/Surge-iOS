@@ -1,6 +1,9 @@
 #!name=RejectAds
 #!desc=去广告合集(补充)
 #!update=2024-04-21
+#!https://github.com/bunizao/TutuBetterRules/blob/tutu/Surge/module/All-in-One-2.x.sgmodule
+#!author=@hututu0 整理，来源见脚本以及注释，感谢以下大佬！！！
+#!source=Rules@hututu0 | Xiaohongshu@ddgksf2013 | Amap@kokoryh | Cainiao@Keywos | Weibo@Rucu6 | Zhihu@Rucu6 | Tools@ScriptHub
 
 [Rule]
 # 十分重要
