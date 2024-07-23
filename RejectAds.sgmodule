@@ -7,6 +7,7 @@
 
 [Rule]
 # 十分重要
+DOMAIN,iacc.qq.com,DIRECT
 RULE-SET,https://raw.githubusercontent.com/bunizao/TutuBetterRules/tutu/RuleList/DOMAlN/AD.Reject.list,REJECT
 RULE-SET,https://raw.githubusercontent.com/bunizao/TutuBetterRules/tutu/RuleList/DOMAlN/AD.Reject-Drop.list,REJECT-DROP
 
