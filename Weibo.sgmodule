@@ -1,7 +1,7 @@
 #!name=微博
 #!desc=全面净化
 #!author=RuCu6 zmqcherish
-#!update=2024-08-17 08:25
+#!update=2024-08-18 08:10
 
 [URL Rewrite]
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php|sdkconfig\.php) - reject
@@ -11,7 +11,6 @@
 ^https:\/\/api\.weibo\.cn\/2\/!\/live\/media_homelist\? data-type=text data="{}" status-code=200
 ^https:\/\/api\.weibo\.cn\/2\/comments\/bullet_screens\? data-type=text data="{}" status-code=200
 ^https:\/\/api\.weibo\.cn\/2\/photo\/info\? data-type=text data="{}" status-code=200
-^https:\/\/api\.weibo\.cn\/2\/profile\/container_timeline\?flowId=\d+&invokeType=manual&manualType=scroll&pageDataType=flow&taskType=loadMore& data-type=text data="{}" status-code=200
 ^https:\/\/api\.weibo\.cn\/2\/statuses\/(container_positive|push_info)\? data-type=text data="{}" status-code=200
 ^https:\/\/api\.weibo\.cn\/2\/vote\/get_vote_detail\? data-type=text data="{}" status-code=200
 ^https:\/\/api\.weibo\.cn\/2\/!\/chaohua\/discovery\/home_bottom\/switch\? data-type=text data="{}" status-code=200
