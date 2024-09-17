@@ -4,11 +4,13 @@ DOMAIN,dns.weixin.qq.com:80
 # > Safari 防跳转
 DOMAIN,app-site-association.cdn-apple.com
 
-#2024-07-20
-#规则数量:189
+#2024-09-17
+#规则数量:193
 #不支持的规则数量:0
 #已排除的规则数量:0
+
 #-----------------以下为解析后的规则-----------------#
+
 DOMAIN,dns.alidns.com
 DOMAIN,ems.youku.com
 DOMAIN,hudong.alicdn.com
@@ -70,9 +72,9 @@ DOMAIN,open.kuaishou.com
 DOMAIN,pagead2.googlesyndication-cn.com
 DOMAIN,pagead2.googlesyndication.com
 DOMAIN,sdk.e.qq.com
+DOMAIN,tangram.e.qq.com
 DOMAIN,ws.tapjoyads.com
 DOMAIN,www.googleadservices.com
-DOMAIN,xlog.jd.com
 DOMAIN-SUFFIX,ads.linkedin.com
 DOMAIN-SUFFIX,ads.vungle.com
 DOMAIN-SUFFIX,adservice.google.com
@@ -85,6 +87,7 @@ DOMAIN-SUFFIX,kuaishouzt.com
 DOMAIN-SUFFIX,miaozhen.com
 DOMAIN-SUFFIX,ubixioe.com
 DOMAIN-SUFFIX,unityads.unity3d.com
+DOMAIN-SUFFIX,v.smtcdns.com
 DOMAIN-SUFFIX,zijieapi.com
 DOMAIN-KEYWORD,-ad-sign.byteimg.com
 DOMAIN-KEYWORD,ads.g.doubleclick
@@ -102,6 +105,8 @@ DOMAIN,dns.jd.com
 IP-CIDR,101.124.19.122/32,no-resolve
 IP-CIDR6,2402:db40:5100:1011::5/128,no-resolve
 DOMAIN,api.liquidlink.cn
+DOMAIN,ads.service.kugou.com
+DOMAIN,adserviceretry.kugou.com
 DOMAIN,ad.tencentmusic.com
 DOMAIN,g.koowo.com
 DOMAIN,mobilead.kuwo.cn
@@ -160,10 +165,11 @@ DOMAIN,iadmusicmat.music.126.net
 DOMAIN,iadmusicmatvideo.music.126.net
 DOMAIN,ipv4.music.163.com,extended-matching
 DOMAIN,ipv6.music.163.com,extended-matching
-DOMAIN-SUFFIX,163jiasu.com,extended-matching
 DOMAIN,huodong.weibo.cn
 DOMAIN-SUFFIX,biz.weibo.com
 DOMAIN,badjs.weixinbridge.com
+DOMAIN,dns.weixin.qq.com.cn
+DOMAIN-SUFFIX,wxs.qq.com
 DOMAIN,sdkconfig.ad.xiaomi.com
 DOMAIN,tong.8888888888.bid
 DOMAIN-KEYWORD,4240585f1fb7266
