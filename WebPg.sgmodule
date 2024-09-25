@@ -1,7 +1,8 @@
 #!name=WebPage
 #!desc=移除网页广告。
 #!author=RuCu6[https://github.com/RuCu6]
-#!date=2024-06-30 11:40
+#!icon=https://raw.githubusercontent.com/RuCu6/Loon/main/Icons/app/webpage.png
+#!date=2024-09-22 12:20
 
 [URL Rewrite]
 # 谷歌服务重定向 //*.google.cn
@@ -25,8 +26,5 @@ bd_zhidao = type=http-response, pattern=^https:\/\/zhidao\.baidu\.com\/(?:questi
 # JavDB //javdb.com
 jav_web = type=http-response, pattern=^https:\/\/javdb\.com\/, script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/webpage/javdb.js, requires-body=true
 
-# MissAV 播放页弹窗 (https://missav.com/) //missav.com
-missav = type=http-response, pattern=^https:\/\/missav\.com\/(?:dm\d+\/)?\w{2}\/[\w-]+, script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/myBlockAds.js, requires-body=true
-
 [MITM]
-hostname = %APPEND% boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.google.cn, asserts.avple.tv, javdb.com, missav.com, *.pornhub.com
+hostname = %APPEND% boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.google.cn, asserts.avple.tv, javdb.com, *.pornhub.com
