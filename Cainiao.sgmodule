@@ -1,7 +1,8 @@
 #!name=菜鸟
-#!desc=过滤菜鸟广告。
+#!desc=过滤菜鸟广告。(初次使用此插件，建议卸载菜鸟app，重新安装。)
 #!author=RuCu6[https://github.com/RuCu6]
-#!date=2024-09-04 08:50
+#!icon=https://raw.githubusercontent.com/RuCu6/Loon/main/Icons/app/cainiao.png
+#!date=2024-09-27 11:50
 
 [Rule]
 AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, Cainiao4iPhone*)), REJECT
@@ -26,6 +27,9 @@ DOMAIN,ykad-data.youku.com,REJECT
 DOMAIN,youku-acs.m.taobao.com,REJECT
 
 [Map Local]
+# 底部发现页 - 角标
+^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.app\.home\.tabbar\.marketing\.get\.cn data-type=text data="{}" status-code=200
+
 # 首页 - 好物推荐、商品推广、底部标签页、快递详情页、问卷调查、主页图标
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword\.get\.cn data-type=text data="{}" status-code=200
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.cncommunity\.my\.station\.query\.cn data-type=text data="{}" status-code=200
@@ -43,6 +47,9 @@ DOMAIN,youku-acs.m.taobao.com,REJECT
 ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad data-type=text data="{}" status-code=200
 
 [Script]
+# 我的页面
+移除我的页面推广 = type=http-response, pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.app\.mine\.main\.cn, script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/cainiao.js, requires-body=true
+
 # 首页 - 好物推荐、商品推广、底部标签页、快递详情页、问卷调查、主页图标
 移除首页推广 = type=http-response, pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn, script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/cainiao.js, requires-body=true
 移除首页推广 = type=http-response, pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(?:pickup\.empty\.page|protocol\.homepage)\.get\.cn, script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/cainiao.js, requires-body=true
