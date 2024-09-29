@@ -274,7 +274,7 @@ aliyun_mine = type=http-response, pattern=^https:\/\/(biz)?api\.alipan\.com\/app
 aliyun_board = type=http-response, pattern=^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list, script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/adrive.js, requires-body=true
 
 # 阿里巴巴 //acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
-taobao_1 = type=http-response, pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(?:cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/myBlockAds.js, requires-body=true
+# taobao_1 = type=http-response, pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(?:cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/myBlockAds.js, requires-body=true
 taobao_2 = type=http-response, pattern=^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/myBlockAds.js, requires-body=true
 
 # 草榴社区 //2023.redircdn.com
