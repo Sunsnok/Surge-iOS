@@ -1,22 +1,27 @@
 #!name=MyBlockAds
-#!desc=自用去广告插件，以下app请使用单独插件：高德地图,哔哩哔哩,网易云音乐,微博,YouTube,知乎。
+#!desc=自用去广告插件, 以下app请使用单独插件: 高德地图, 哔哩哔哩, 网易云音乐, 微博, YouTube, 知乎。
 #!author=RuCu6[https://github.com/RuCu6]
-#!date=2024-09-17 22:35
+#!icon=https://raw.githubusercontent.com/RuCu6/Loon/main/Icons/app/myblockads.png
+#!date=2024-10-09 11:30
 
 [Rule]
 # 12306
 DOMAIN,ad.12306.cn,DIRECT
 # 阿里巴巴
+DOMAIN-SUFFIX,ut.taobao.com,REJECT
 DOMAIN,dns.alidns.com,REJECT
 DOMAIN,ems.youku.com,REJECT
 DOMAIN,hudong.alicdn.com,REJECT
 DOMAIN,ossgw.alicdn.com,REJECT
-DOMAIN-SUFFIX,ut.taobao.com,REJECT
 # 阿里云盘
 IP-CIDR,203.107.1.1/24,REJECT,no-resolve
 # 爱奇艺
 DOMAIN,api.iqiyi.com,REJECT
 # Apple
+DOMAIN,ca.iadsdk.apple.com,DIRECT
+DOMAIN-SUFFIX,advp.apple.com,REJECT
+DOMAIN-SUFFIX,iad-apple.com,REJECT
+DOMAIN-SUFFIX,iadsdk.apple.com,REJECT
 DOMAIN,advertising.apple.com,REJECT
 DOMAIN,api-adservices.apple.com,REJECT
 DOMAIN,apple.comscoreresearch.com,REJECT
@@ -28,16 +33,13 @@ DOMAIN,iadmoo.apple.com,REJECT
 DOMAIN,iadworkbench.apple.com,REJECT
 DOMAIN,launch.apple.com,REJECT
 DOMAIN,qwapi.apple.com,REJECT
-DOMAIN-SUFFIX,advp.apple.com,REJECT
-DOMAIN-SUFFIX,iad-apple.com,REJECT
-DOMAIN-SUFFIX,iadsdk.apple.com,REJECT
 # 安全浏览限制解除
-DOMAIN,lookup.api.bsb.baidu.com,REJECT
-DOMAIN-SUFFIX,u3.ucweb.com,REJECT
 DOMAIN-KEYWORD,safebrowsing.,REJECT
+DOMAIN-SUFFIX,u3.ucweb.com,REJECT
+DOMAIN,lookup.api.bsb.baidu.com,REJECT
 # 百度
-DOMAIN,mobads.baidu.com,REJECT
 DOMAIN-SUFFIX,pos.baidu.com,REJECT
+DOMAIN,mobads.baidu.com,REJECT
 # 百度地图
 DOMAIN,afd.baidu.com,REJECT
 DOMAIN,afdconf.baidu.com,REJECT
@@ -59,28 +61,16 @@ DOMAIN,adttrackingprd.hwwt8.com,REJECT
 # 放松双眼
 DOMAIN,adservice.sigmob.cn,REJECT
 # 工商银行
-DOMAIN,pageviewp.icbc.com.cn,REJECT
 DOMAIN-SUFFIX,mall.icbc.com.cn,REJECT
-# 广告联盟
-DOMAIN,ad.zijieapi.com,REJECT
-DOMAIN,adapi.izuiyou.com,REJECT
-DOMAIN,adtracker.adfunlink.com,REJECT
-DOMAIN,dig.bdurl.net,REJECT
-DOMAIN,dsp-x.jd.com,REJECT
-DOMAIN,et.tanx.com,REJECT
-DOMAIN,gdfp.gifshow.com,REJECT
-DOMAIN,init.supersonicads.com,REJECT
-#DOMAIN, is.snssdk.com, REJECT
-DOMAIN,janapi.jd.com,REJECT
-DOMAIN,mercury-gateway.ixiaochuan.cn,REJECT
-DOMAIN,open.e.kuaishou.com,REJECT
-DOMAIN,open.kuaishou.com,REJECT
-DOMAIN,pagead2.googlesyndication-cn.com,REJECT
-DOMAIN,pagead2.googlesyndication.com,REJECT
-DOMAIN,sdk.e.qq.com,REJECT
-DOMAIN,tangram.e.qq.com,REJECT
-DOMAIN,ws.tapjoyads.com,REJECT
-DOMAIN,www.googleadservices.com,REJECT
+DOMAIN,pageviewp.icbc.com.cn,REJECT
+AND, ((OR,((DOMAIN-SUFFIX, amemv.com), (DOMAIN-SUFFIX, zijieapi.com))), (DOMAIN-KEYWORD,-misc-)), REJECT
+DOMAIN-KEYWORD,-ad-sign.byteimg.com,REJECT
+DOMAIN-KEYWORD,ads.g.doubleclick,REJECT
+DOMAIN-KEYWORD,asiad.byteactivity,REJECT
+DOMAIN-KEYWORD,pangolin-sdk-toutiao,REJECT
+DOMAIN-KEYWORD,pangolin.snssdk.com,REJECT
+DOMAIN-KEYWORD,pglstatp-toutiao,REJECT
+DOMAIN-KEYWORD,video-cn.snssdk.com,REJECT
 DOMAIN-SUFFIX,ads.linkedin.com,REJECT
 DOMAIN-SUFFIX,ads.vungle.com,REJECT
 DOMAIN-SUFFIX,adservice.google.com,REJECT
@@ -94,20 +84,33 @@ DOMAIN-SUFFIX,miaozhen.com,REJECT
 DOMAIN-SUFFIX,ubixioe.com,REJECT
 DOMAIN-SUFFIX,unityads.unity3d.com,REJECT
 DOMAIN-SUFFIX,v.smtcdns.com,REJECT
-DOMAIN-SUFFIX,zijieapi.com,REJECT
-DOMAIN-KEYWORD,-ad-sign.byteimg.com,REJECT
-DOMAIN-KEYWORD,ads.g.doubleclick,REJECT
-DOMAIN-KEYWORD,asiad.byteactivity,REJECT
-DOMAIN-KEYWORD,pangolin-sdk-toutiao,REJECT
-DOMAIN-KEYWORD,pangolin.snssdk.com,REJECT
-DOMAIN-KEYWORD,pglstatp-toutiao,REJECT
-DOMAIN-KEYWORD,video-cn.snssdk.com,REJECT
+DOMAIN,ad.zijieapi.com,REJECT
+DOMAIN,adapi.izuiyou.com,REJECT
+DOMAIN,adtracker.adfunlink.com,REJECT
+DOMAIN,dig.bdurl.net,REJECT
+DOMAIN,dsp-x.jd.com,REJECT
+DOMAIN,et.tanx.com,REJECT
+DOMAIN,gdfp.gifshow.com,REJECT
+DOMAIN,init.supersonicads.com,REJECT
+DOMAIN,janapi.jd.com,REJECT
+DOMAIN,lf-ad-ies.bytecdn.cn,REJECT
+DOMAIN,mercury-gateway.ixiaochuan.cn,REJECT
+DOMAIN,mon.toutiaocloud.com,REJECT
+DOMAIN,open.e.kuaishou.com,REJECT
+DOMAIN,open.kuaishou.com,REJECT
+DOMAIN,pagead2.googlesyndication-cn.com,REJECT
+DOMAIN,pagead2.googlesyndication.com,REJECT
+DOMAIN,sdk.e.qq.com,REJECT
+DOMAIN,tangram.e.qq.com,REJECT
+DOMAIN,ws.tapjoyads.com,REJECT
+DOMAIN,www.googleadservices.com,REJECT
 # 海尔智家
 DOMAIN-SUFFIX,ehaier.com,REJECT
+AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, Hema4iPhone*)), REJECT
 # httpdns
-DOMAIN,hdns.ksyun.com,REJECT
 DOMAIN-KEYWORD,httpdns.,REJECT
 DOMAIN-KEYWORD,httpdns-,REJECT
+DOMAIN,hdns.ksyun.com,REJECT
 # 建设银行
 DOMAIN-KEYWORD,adv.ccb.com,REJECT
 # 京东
@@ -115,8 +118,8 @@ DOMAIN,dns.jd.com,REJECT
 IP-CIDR,101.124.19.122/32,REJECT,no-resolve
 IP-CIDR6,2402:db40:5100:1011::5/128,REJECT,no-resolve
 # 酷狗音乐
-DOMAIN,ads.service.kugou.com,REJECT
 DOMAIN,adserviceretry.kglink.cn,DIRECT
+DOMAIN,ads.service.kugou.com,REJECT
 DOMAIN,adserviceretry.kugou.com,REJECT
 # 酷我音乐
 DOMAIN,ad.tencentmusic.com,REJECT
@@ -126,6 +129,7 @@ DOMAIN,rich.kuwo.cn,REJECT
 # 蓝奏云
 DOMAIN,statics.woozooo.com,REJECT
 # 芒果TV
+DOMAIN-SUFFIX,da.mgtv.com,REJECT
 DOMAIN,credits.bz.mgtv.com,REJECT
 DOMAIN,credits2.bz.mgtv.com,REJECT
 DOMAIN,credits3.bz.mgtv.com,REJECT
@@ -138,7 +142,6 @@ DOMAIN,rc-topic-api.bz.mgtv.com,REJECT
 DOMAIN,rprain.bz.mgtv.com,REJECT
 DOMAIN,rprain.log.mgtv.com,REJECT
 DOMAIN,vip.bz.mgtv.com,REJECT
-DOMAIN-SUFFIX,da.mgtv.com,REJECT
 # 美团
 DOMAIN,maplocatesdksnapshot.d.meituan.net,REJECT
 DOMAIN,metrics-picture.d.meituan.net,REJECT
@@ -157,36 +160,37 @@ DOMAIN,api.zuihuimai.com,REJECT
 # 数字联盟
 DOMAIN-SUFFIX,shuzilm.cn,REJECT
 # Speedtest
+DOMAIN-KEYWORD,-adsystem.com,REJECT
 DOMAIN,ads.pubmatic.com,REJECT
 DOMAIN,id.hadron.ad.gt,REJECT
-DOMAIN-KEYWORD,-adsystem.com,REJECT
 # 太平洋保险
 DOMAIN,a.cpic.com.cn,REJECT
 # 腾讯
+DOMAIN-KEYWORD,trace.qq.com,REJECT
+DOMAIN-KEYWORD,trace.video.qq.com,REJECT
+DOMAIN-SUFFIX,gdt.qq.com,REJECT
+DOMAIN-SUFFIX,l.qq.com,REJECT
 DOMAIN,adsmind.gdtimg.com,REJECT
 DOMAIN,info4.video.qq.com,REJECT
 DOMAIN,info6.video.qq.com,REJECT
 DOMAIN,ios.video.mpush.qq.com,REJECT
 DOMAIN,otheve.beacon.qq.com,REJECT
 DOMAIN,pgdt.gtimg.cn,REJECT
+DOMAIN,pgdt.ugdtimg.com,REJECT
 DOMAIN,tmead.y.qq.com,REJECT
 DOMAIN,tmeadbak.y.qq.com,REJECT
 DOMAIN,tmeadcomm.y.qq.com,REJECT
 DOMAIN,tpns.qq.com,REJECT
-DOMAIN-SUFFIX,gdt.qq.com,REJECT
-DOMAIN-SUFFIX,l.qq.com,REJECT
-DOMAIN-KEYWORD,trace.qq.com,REJECT
-DOMAIN-KEYWORD,trace.video.qq.com,REJECT
 IP-CIDR,47.110.187.87/32,REJECT,no-resolve
 # 微信
+DOMAIN-SUFFIX,wxs.qq.com,REJECT
 DOMAIN,badjs.weixinbridge.com,REJECT
 DOMAIN,dns.weixin.qq.com.cn,REJECT
-DOMAIN-SUFFIX,wxs.qq.com,REJECT
 # 小米
 DOMAIN,sdkconfig.ad.xiaomi.com,REJECT
 # 移花宫
 DOMAIN,tong.8888888888.bid,REJECT
-DOMAIN-KEYWORD,4240585f1fb7266,REJECT
+AND, ((OR, ((DOMAIN-KEYWORD, kc.), (DOMAIN-KEYWORD, kcc.), (DOMAIN-KEYWORD, kg.))), (DEST-PORT, 8008)), REJECT
 # 云闪付 开屏广告
 DOMAIN,ads.95516.com,REJECT
 DOMAIN,switch.cup.com.cn,REJECT
@@ -224,9 +228,18 @@ URL-REGEX,^http:\/\/\w{32}\.jddebug\.com\/diagnose\?,REJECT
 # 百度云 //pan.baidu.com
 ^https:\/\/pan\.baidu\.com\/(?:act\/|aipic\/|aisearch\/|api\/getsyscfg\?|rest\/) data-type=text data="{}" status-code=200
 
+# 昌原云充 五代十路 //www.washpayer.com
+^https:\/\/www\.washpayer\.com\/(?:ad\/getBannerAd|ad\/user-adword|user\/getBannerList) data-type=text data="{}" status-code=200
+
 # 豆瓣 //api.douban.com, img3.doubanio.com, qnmob3.doubanio.com
 ^https:\/\/api\.douban\.com\/v2\/app_ads\/splash\w+ data-type=text data="{}" status-code=200
 ^https:\/\/(?:img|qnmob)3\.doubanio\.com\/view\/dale-online\/dale_ad\/public\/\w+ data-type=text data="{}" status-code=200
+
+# 和风天气 //hfapp-service.qweather.net
+^https:\/\/hfapp-service\.qweather\.net\/v2\.0\/app\/ad\/list\? data-type=text data="{}" status-code=200
+
+# 盒马
+^https:\/\/acs-m\.freshippo\.com\/gw\/mtop\.wdk\.render\.querysinglepage\/ data-type=text data="{}" status-code=200
 
 # 京东 //api.m.jd.com
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:searchBoxWord|stationPullService|uniformRecommend[06]) data-type=text data="{}" status-code=200
@@ -280,10 +293,12 @@ taobao_2 = type=http-response, pattern=^https:\/\/poplayer\.template\.alibaba\.c
 # 草榴社区 //2023.redircdn.com
 caoliu = type=http-response, pattern=^https:\/\/2023\.redircdn\.com\/web\/mob_post\.js\?, script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/myBlockAds.js, requires-body=true
 
+# 昌原云充 五代十路 //www.washpayer.com
+changyuan_1 = type=http-response, pattern=^http:\/\/ad\.5tao5ai\.com\/common\/getReceipt\?, script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/changyuan.js, requires-body=true
+changyuan_2 = type=http-response, pattern=^https:\/\/www\.washpayer\.com\/(?:common\/getReceipt|user\/message\/equipmentPara), script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/changyuan.js, requires-body=true
+
 # 京东 //api.m.jd.com
 jingdong = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/jingdong.js, requires-body=true
-# 京东极速版 //api.m.jd.com
-# replaceBody = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=jdLiteAdvertisingVO-%3Erucu6
 
 # 酷安 //api.coolapk.com
 coolapk = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/(?:feed\/detail|feed\/replyList|page\/dataList|main\/dataList|main\/indexV8|main\/init), script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/coolapk.js, requires-body=true
@@ -306,4 +321,4 @@ cloud139_1 = type=http-response, pattern=^https:\/\/ad\.mcloud\.139\.com\/advert
 cloud139_2 = type=http-response, pattern=^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent, script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/cloud139.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% ad.12306.cn, mobile.12306.cn, list-app-m.i4.cn, *api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, 2023.redircdn.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, image.mybank.icbc.com.cn, api.m.jd.com, gab.122.gov.cn, api.coolapk.com, adserviceretry.kglink.cn, gateway.kugou.com, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, mobilepaas.abchina.com.cn, ad.mcloud.139.com, jzts.cmpassport.com
+hostname = %APPEND% ad.12306.cn, mobile.12306.cn, list-app-m.i4.cn, *api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, 2023.redircdn.com, www.washpayer.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, image.mybank.icbc.com.cn, hfapp-service.qweather.net, acs-m.freshippo.com, api.m.jd.com, gab.122.gov.cn, api.coolapk.com, adserviceretry.kglink.cn, gateway.kugou.com, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, mobilepaas.abchina.com.cn, ad.mcloud.139.com, jzts.cmpassport.com
