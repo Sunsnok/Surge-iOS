@@ -2,10 +2,10 @@
 #!desc=缺德地图有治了。
 #!author=RuCu6[https://github.com/RuCu6], kokoryh[https://github.com/kokoryh]
 #!icon=https://raw.githubusercontent.com/RuCu6/Loon/main/Icons/app/amap.png
-#!date=2024-10-15 09:40
+#!date=2024-10-19 22:45
 
 [Rule]
-AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, AMapiPhone*)), REJECT
+AND, ((URL-REGEX, ^http:\/\/(?:[\d\.]+|amdc\.m\.taobao\.com)\/amdc\/mobileDispatch), (USER-AGENT, AMapiPhone*)), REJECT
 
 [Map Local]
 # 导航详情页 - 路线规划、地点详情页、搜索详情页、导航结束页
@@ -33,8 +33,7 @@ AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-A
 移除导航详情页推广 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/perception\/drive\/(?:routeInfo|routePlan), script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/amap.js, requires-body=true
 移除导航详情页推广 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search\/(?:common\/coupon\/info|poi\/detail), script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/amap.js, requires-body=true
 移除导航详情页推广 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_bff\/hotword\?, script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/amap.js, requires-body=true
-移除导航详情页推广 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\?, script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/amap.js, requires-body=true
-移除导航详情页推广 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(?:homepage|mps|search\/sp|sug|tips_operation_location), script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/amap.js, requires-body=true
+移除导航详情页推广 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(?:mps|search\/sp|sug|tips_operation_location), script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/amap.js, requires-body=true
 
 # 首页 - 推广卡片、红点角标、右上角动图、搜索框热词、左下角天气、消息横幅
 移除首页推广 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(?:card-service-plan-home|main-page), script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/amap.js, requires-body=true
