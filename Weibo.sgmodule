@@ -52,7 +52,7 @@ DOMAIN-SUFFIX,biz.weibo.com,REJECT
 移除详情页广告 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:container_timeline(?:_hot|_topic|_topicpage|_unread)?|unread_hot_timeline), script-path=https://raw.githubusercontent.com/Sunsnok/Surge-iOS/main/Script/weibo.js, requires-body=true
 移除详情页广告 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:extend|show), script-path=https://raw.githubusercontent.com/Sunsnok/Surge-iOS/main/Script/weibo.js, requires-body=true
 移除详情页广告 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/video\/tiny_stream_video_list\?, script-path=https://raw.githubusercontent.com/Sunsnok/Surge-iOS/main/Script/weibo.js, requires-body=true
-移除详情页广告 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels\?, script-path=https://raw.githubusercontent.com/Sunsnok/Surge-iOS/main/Script/weibo.js, requires-body=true
+# 移除详情页广告 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels\?, script-path=https://raw.githubusercontent.com/Sunsnok/Surge-iOS/main/Script/weibo.js, requires-body=true
 
 # 消息页
 移除消息页广告 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/direct_messages\/user_list\?, script-path=https://raw.githubusercontent.com/Sunsnok/Surge-iOS/main/Script/weibo.js, requires-body=true
