@@ -51,8 +51,8 @@ DOMAIN,youku-acs.m.taobao.com,REJECT
 移除我的页面推广 = type=http-response, pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.app\.mine\.main\.cn, script-path=https://raw.githubusercontent.com/Sunsnok/Surge-iOS/main/Script/cainiao.js, requires-body=true
 
 # 首页 - 好物推荐、商品推广、底部标签页、快递详情页、问卷调查、主页图标
-移除首页推广 = type=http-response, pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn, script-path=https://raw.githubusercontent.com/Sunsnok/Surge-iOS/main/Script/cainiao.js, requires-body=true
-移除首页推广 = type=http-response, pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(?:pickup\.empty\.page|protocol\.homepage)\.get\.cn, script-path=https://raw.githubusercontent.com/Sunsnok/Surge-iOS/main/Script/cainiao.js, requires-body=true
+移除首页推广1 = type=http-response, pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn, script-path=https://raw.githubusercontent.com/Sunsnok/Surge-iOS/main/Script/cainiao.js, requires-body=true
+移除首页推广2 = type=http-response, pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(?:pickup\.empty\.page|protocol\.homepage)\.get\.cn, script-path=https://raw.githubusercontent.com/Sunsnok/Surge-iOS/main/Script/cainiao.js, requires-body=true
 
 # 消息中心
 移除消息中心推广 = type=http-response, pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.nbfriend\.message\.conversation\.list\.cn, script-path=https://raw.githubusercontent.com/Sunsnok/Surge-iOS/main/Script/cainiao.js, requires-body=true
