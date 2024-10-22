@@ -68,8 +68,8 @@ IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT,no-resolve
 
 # 回答详情页 - 评论区顶部、下一个回答
 移除回答详情页推广 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/next-(?:bff|data|render), script-path=https://raw.githubusercontent.com/Sunsnok/Surge-iOS/main/Script/zhihu.js, requires-body=true
-移除回答详情页推广 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/questions\/\d+(?:\/answers|\/feeds|\?include=), script-path=https://raw.githubusercontent.com/Sunsnok/Surge-iOS/main/Script/zhihu.js, requires-body=true
-# 移除回答详情页推广 = type=http-response, pattern=^https:\/\/www\.zhihu\.com\/api\/v4\/(?:articles|answers)\/\d+\/recommendations?\?, script-path=https://raw.githubusercontent.com/Sunsnok/Surge-iOS/main/Script/zhihu.js, requires-body=true
+# 移除回答详情页推广 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/questions\/\d+(?:\/answers|\/feeds|\?include=), script-path=https://raw.githubusercontent.com/Sunsnok/Surge-iOS/main/Script/zhihu.js, requires-body=true
+移除回答详情页推广 = type=http-response, pattern=^https:\/\/www\.zhihu\.com\/api\/v4\/(?:articles|answers)\/\d+\/recommendations?\?, script-path=https://raw.githubusercontent.com/Sunsnok/Surge-iOS/main/Script/zhihu.js, requires-body=true
 
 # 其他 - 服务器推送配置
 拦截服务器推送配置 = type=http-response, pattern=^https:\/\/appcloud2\.zhihu\.com\/v3\/config, script-path=https://raw.githubusercontent.com/Sunsnok/Surge-iOS/main/Script/zhihu.js, requires-body=true
