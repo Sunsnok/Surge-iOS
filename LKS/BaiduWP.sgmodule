@@ -114,5 +114,7 @@ DOMAIN-SUFFIX,union.baidu.com,REJECT,extended-matching,pre-matching
 # 广告配置
 ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adv data-type=text data="{}" status-code=200
 
+##, 180.76.76.200, 180.76.76.112
+
 [MITM]
-hostname = %APPEND% pan.baidu.com, 180.76.76.200, 180.76.76.112
+hostname = %APPEND% pan.baidu.com
