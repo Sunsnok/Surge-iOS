@@ -1,36 +1,36 @@
 #!name=广告平台拦截器
-#!desc=此插件是所有去广告插件的基础，只针对广告平台处理。你依然需要安装其他去广告插件来搭配使用，并确保此插件始终排序在顶部。\n支持拦截腾讯、字节跳动、快手、百度、邑盟、倍孜、艾狄墨搏、袤博、极光、个推、友盟、阿里、优比客思、秒针、网易、美团、小米、京东、天目、讯飞、泛连、锐讯灵通、聚次方、美数、嗨量、钧云、变现猫、章鱼、分秒、泰之菩、翼信、快易、数萤技术、方麟、益起、上量优选、新义互联、腾云天下、布里奇、塔酷、SupersonicAds、APPSAD等广告平台的广告请求，更适合iOS平台的应用。
+#!desc=此插件是所有去广告插件的基础，只针对广告平台处理。你依然需要安装其他去广告插件来搭配使用，并确保此插件始终排序在顶部。\n支持拦截腾讯、字节跳动、快手、百度、邑盟、倍孜、艾狄墨搏、袤博、极光、个推、友盟、阿里、优比客思、秒针、网易、美团、小米、京东、天目、讯飞、泛连、锐讯灵通、聚次方、美数、嗨量、钧云、变现猫、章鱼、分秒、泰之菩、翼信、快易、数萤技术、方麟、益起、上量优选、新义互联、腾云天下、布里奇、塔酷、丽声、SupersonicAds、APPSAD等广告平台的广告请求，更适合iOS平台的应用。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Website_icon/120px/TencentAd.png
 #!category=iKeLee
 #!tag=去广告
 #!loon_version=3.2.1(749)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
-#!date=2024-10-04 03:37:48
+#!date=2024-11-02 15:19:31
 
 [Rule]
-AND, ((DOMAIN-KEYWORD, -ad-,extended-matching), (DOMAIN-SUFFIX, byteimg.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, -ttam-,extended-matching), (DOMAIN-SUFFIX, ibyteimg.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, ssdk-,extended-matching), (DOMAIN-SUFFIX, pangle.io,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, pangolin,extended-matching), (DOMAIN-SUFFIX, sgsnssdk.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, lf,extended-matching), (DOMAIN-KEYWORD, -short.bytetos.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, v,extended-matching), (DOMAIN-KEYWORD, -be-pack.pglstatp-toutiao.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, sf,extended-matching), (DOMAIN-KEYWORD, -be-pack.pglstatp-toutiao.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, s,extended-matching), (DOMAIN-KEYWORD, -fe-scm.pglstatp-toutiao.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, sf,extended-matching), (DOMAIN-KEYWORD, -ttcdn-tos.pstatp.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, sf,extended-matching), (DOMAIN-KEYWORD, -fe-tos.pglstatp-toutiao.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, sf,extended-matching), (DOMAIN-KEYWORD, -static.i18n-pglstatp.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, if,extended-matching), (DOMAIN-KEYWORD, -cdn-tos.bytescm.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, if,extended-matching), (DOMAIN-KEYWORD, -analytics.bytescm.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, lf,extended-matching), (DOMAIN-KEYWORD, -analytics.bytescm.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, lf,extended-matching), (DOMAIN-KEYWORD, -analytics.bytescm.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, ads,extended-matching), (DOMAIN-KEYWORD, normal,extended-matching), (DOMAIN-SUFFIX, zijieapi.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, api,extended-matching), (DOMAIN-KEYWORD, -access-,extended-matching), (DOMAIN-SUFFIX, pangle.io,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, api,extended-matching), (DOMAIN-KEYWORD, -log-,extended-matching), (DOMAIN-SUFFIX, pangle.io,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, api,extended-matching), (DOMAIN-KEYWORD, -dual-event-,extended-matching), (DOMAIN-SUFFIX, pangle.io,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, api,extended-matching), (DOMAIN-KEYWORD, pangolin,extended-matching), (DOMAIN-SUFFIX, sgsnssdk.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, ads,extended-matching), (DOMAIN-KEYWORD, -normal-lq,extended-matching), (DOMAIN-SUFFIX, zijieapi.com,extended-matching)), REJECT,pre-matching
-URL-REGEX,^http:\/\/p\d+-be-pack-sign\.pglstatp-toutiao\.com\/(ad-app-package|web\.business\.image)\/,REJECT,extended-matching
+AND,((DOMAIN-KEYWORD,-ad-,extended-matching),(DOMAIN-SUFFIX,byteimg.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,-ttam-,extended-matching),(DOMAIN-SUFFIX,ibyteimg.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,ssdk-,extended-matching),(DOMAIN-SUFFIX,pangle.io,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,pangolin,extended-matching),(DOMAIN-SUFFIX,sgsnssdk.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,lf,extended-matching),(DOMAIN-KEYWORD,-short.bytetos.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,v,extended-matching),(DOMAIN-KEYWORD,-be-pack.pglstatp-toutiao.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,sf,extended-matching),(DOMAIN-KEYWORD,-be-pack.pglstatp-toutiao.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,s,extended-matching),(DOMAIN-KEYWORD,-fe-scm.pglstatp-toutiao.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,sf,extended-matching),(DOMAIN-KEYWORD,-ttcdn-tos.pstatp.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,sf,extended-matching),(DOMAIN-KEYWORD,-fe-tos.pglstatp-toutiao.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,sf,extended-matching),(DOMAIN-KEYWORD,-static.i18n-pglstatp.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,if,extended-matching),(DOMAIN-KEYWORD,-cdn-tos.bytescm.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,if,extended-matching),(DOMAIN-KEYWORD,-analytics.bytescm.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,lf,extended-matching),(DOMAIN-KEYWORD,-analytics.bytescm.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,lf,extended-matching),(DOMAIN-KEYWORD,-analytics.bytescm.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,ads,extended-matching),(DOMAIN-KEYWORD,normal,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,api,extended-matching),(DOMAIN-KEYWORD,-access-,extended-matching),(DOMAIN-SUFFIX,pangle.io,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,api,extended-matching),(DOMAIN-KEYWORD,-log-,extended-matching),(DOMAIN-SUFFIX,pangle.io,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,api,extended-matching),(DOMAIN-KEYWORD,-dual-event-,extended-matching),(DOMAIN-SUFFIX,pangle.io,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,api,extended-matching),(DOMAIN-KEYWORD,pangolin,extended-matching),(DOMAIN-SUFFIX,sgsnssdk.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,ads,extended-matching),(DOMAIN-KEYWORD,-normal-lq,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching)),REJECT,pre-matching
+URL-REGEX,"^http:\/\/p\d+-be-pack-sign\.pglstatp-toutiao\.com\/(ad-app-package|web\.business\.image)\/",REJECT,extended-matching
 DOMAIN,mon.zijieapi.com,REJECT,extended-matching,pre-matching
 DOMAIN,lf-ad-ies.bytecdn.cn,REJECT,extended-matching,pre-matching
 DOMAIN,i.snssdk.com,REJECT,extended-matching,pre-matching
@@ -75,10 +75,13 @@ DOMAIN,config.inmobi.cn,REJECT,extended-matching,pre-matching
 # 北京锐讯灵通科技有限公司
 DOMAIN,ztoken.uyunad.com,REJECT,extended-matching,pre-matching
 DOMAIN,aaid.uyunad.com,REJECT,extended-matching,pre-matching
+DOMAIN,yumao.puata.info,REJECT,extended-matching,pre-matching
 # 快手联盟 - 广告服务商
 DOMAIN,gdfp.gifshow.com,REJECT,extended-matching,pre-matching
 DOMAIN,open.e.kuaishou.com,REJECT,extended-matching,pre-matching
+DOMAIN,adtrack.e.kuaishou.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,adukwai.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,adbkwai.com,REJECT,extended-matching,pre-matching
 # SupersonicAds
 DOMAIN,init.supersonicads.com,REJECT,extended-matching,pre-matching
 # APPSAD
@@ -148,6 +151,7 @@ DOMAIN,huatuocode.huatuo.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN,info4.video.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN,info6.video.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN,ios.bugly.qq.com,REJECT,extended-matching,pre-matching
+DOMAIN,pro.bugly.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN,ios.video.mpush.qq.com,REJECT,extended-matching,pre-matching
 # DOMAIN, mazu.m.qq.com, REJECT // 误杀
 DOMAIN,mi.gdt.qq.com,REJECT,extended-matching,pre-matching
@@ -221,10 +225,11 @@ DOMAIN,ossgw.alicdn.com,REJECT,extended-matching,pre-matching
 DOMAIN,ems.youku.com,REJECT,extended-matching,pre-matching
 DOMAIN,hudong.alicdn.com,REJECT,extended-matching,pre-matching
 DOMAIN,et.tanx.com,REJECT,extended-matching,pre-matching
+DOMAIN,df.tanx.com,REJECT,extended-matching,pre-matching
 DOMAIN,beacon-api.aliyuncs.com,REJECT,extended-matching,pre-matching
 DOMAIN,adash.man.aliyuncs.com,REJECT,extended-matching,pre-matching
 DOMAIN,applog.uc.cn,REJECT,extended-matching,pre-matching
-AND, ((DOMAIN-KEYWORD, adash,extended-matching), (DOMAIN-SUFFIX, ut.taobao.com,extended-matching)), REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,adash,extended-matching),(DOMAIN-SUFFIX,ut.taobao.com,extended-matching)),REJECT,pre-matching
 # 网易
 DOMAIN,nex.163.com,REJECT,extended-matching,pre-matching
 DOMAIN,iad.g.163.com,REJECT,extended-matching,pre-matching
@@ -293,6 +298,8 @@ DOMAIN,api.bridgeoos.com,REJECT,extended-matching,pre-matching
 DOMAIN,adx-os.bridgeoos.com,REJECT,extended-matching,pre-matching
 DOMAIN,adx-sg-req.bridgeoos.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,bridgeoos.com,REJECT,extended-matching,pre-matching
+# 海南丽声影视文化传播有限公司
+DOMAIN,ad-evods.tianya.tv,REJECT,extended-matching,pre-matching
 
 [URL Rewrite]
 # 拼多多广告平台
