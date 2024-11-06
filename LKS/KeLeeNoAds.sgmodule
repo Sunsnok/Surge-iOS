@@ -6,7 +6,7 @@
 #!tag=去广告
 #!loon_version=3.2.1(749)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
-#!date=2024-08-14 21:37:06
+#!date=2024-11-05 08:18:38
 
 [Rule]
 # Outlook
@@ -25,7 +25,7 @@ DOMAIN-SUFFIX,doubleclick.net,REJECT,extended-matching,pre-matching
 # 虎牙直播开屏广告
 DOMAIN,business.msstatic.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,v1d.szbdyd.com,REJECT,extended-matching,pre-matching
-URL-REGEX,^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$,REJECT,extended-matching
+URL-REGEX,"^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$",REJECT,extended-matching
 # 中国联通
 DOMAIN-SUFFIX,m1.ad.10010.com,REJECT,extended-matching,pre-matching
 # 中国电信
@@ -36,8 +36,8 @@ DOMAIN,adshows.21cn.com,REJECT,extended-matching,pre-matching
 IP-CIDR,122.229.8.47/32,REJECT,no-resolve,pre-matching
 IP-CIDR,122.229.29.89/32,REJECT,no-resolve,pre-matching
 # 快递100
-URL-REGEX,^http:\/\/p\.kuaidi100\.com\/mobile\/mobileapi\.do,REJECT-TINYGIF,extended-matching
-URL-REGEX,^http:\/\/p\.kuaidi100\.com\/advertisement\/,REJECT-TINYGIF,extended-matching
+URL-REGEX,"^http:\/\/p\.kuaidi100\.com\/mobile\/mobileapi\.do",REJECT-TINYGIF,extended-matching
+URL-REGEX,"^http:\/\/p\.kuaidi100\.com\/advertisement\/",REJECT-TINYGIF,extended-matching
 # 亲邻开门
 DOMAIN,mall-dsp2.qinlinkeji.com,REJECT,extended-matching,pre-matching
 DOMAIN,mallapi2.qinlinkeji.com,REJECT,extended-matching,pre-matching
@@ -107,13 +107,11 @@ DOMAIN,open-pixon.ads-pixiv.net,REJECT,extended-matching,pre-matching
 
 # 小米有品
 ^https:\/\/shopapi\.io\.mi\.com\/mtop\/mf\/resource\/homePage\/pageConfig data-type=text data=" " status-code=200
-
-# 米家
-^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|myTab)\? data-type=text data="{}" status-code=200
 ^http:\/\/app\.zhoudamozi\.com\/ad\/.+ data-type=text data=" " status-code=200
 
 # QQ钱包广告 //m.qianbao.qq.com
 ^https:\/\/m\.qianbao\.qq\.com\/services\/walletHome\/getQQshopData\? data-type=text data="{}" status-code=200
+
 ^https:\/\/m\.qianbao\.qq\.com\/services\/walletHome\/getGameData\? data-type=text data="{}" status-code=200
 
 # QQ钱包公益广告
@@ -171,6 +169,7 @@ DOMAIN,open-pixon.ads-pixiv.net,REJECT,extended-matching,pre-matching
 
 # 猫眼 - 移除开屏广告、红包悬浮
 ^https:\/\/p0\.pipi\.cn\/(adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.jpg\?imageMogr2\/quality\/ data-type=text data="{}" status-code=200
+
 ^https:\/\/p0\.pipi\.cn\/(adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.(jpg|png)\?imageMogr2\/thumbnail\/(860x0|!165x165|!1049x1169) data-type=text data="{}" status-code=200
 
 # 站酷 - 开屏广告
