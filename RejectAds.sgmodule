@@ -10,8 +10,6 @@ DOMAIN,iacc.qq.com,DIRECT
 # 防止TG加载转圈
 IP-CIDR,95.161.76.100/31,REJECT-NO-DROP,no-resolve
 
-可以试一试，我那倒是有用
-
 [URL Rewrite]
 # ----------- Eleme -----------
 ^https:\/\/elemecdn.com\/.+\/sitemap - reject
