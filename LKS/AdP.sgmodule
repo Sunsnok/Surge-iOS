@@ -6,7 +6,7 @@
 #!tag=去广告
 #!loon_version=3.2.1(749)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
-#!date=2024-11-02 15:19:31
+#!date=2024-11-15 16:13:22
 
 [Rule]
 AND,((DOMAIN-KEYWORD,-ad-,extended-matching),(DOMAIN-SUFFIX,byteimg.com,extended-matching)),REJECT,pre-matching
@@ -81,7 +81,6 @@ DOMAIN,gdfp.gifshow.com,REJECT,extended-matching,pre-matching
 DOMAIN,open.e.kuaishou.com,REJECT,extended-matching,pre-matching
 DOMAIN,adtrack.e.kuaishou.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,adukwai.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,adbkwai.com,REJECT,extended-matching,pre-matching
 # SupersonicAds
 DOMAIN,init.supersonicads.com,REJECT,extended-matching,pre-matching
 # APPSAD
@@ -129,6 +128,7 @@ DOMAIN-SUFFIX,jiguang.cn,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,jpush.cn,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,jpush.io,REJECT,extended-matching,pre-matching
 # 百度联盟 - 广告服务商
+DOMAIN,afd.baidu.com,REJECT,extended-matching,pre-matching
 DOMAIN,als.baidu.com,REJECT,extended-matching,pre-matching
 DOMAIN,bgg.baidu.com,REJECT,extended-matching,pre-matching
 DOMAIN,cpro.baidustatic.com,REJECT,extended-matching,pre-matching
@@ -193,6 +193,7 @@ DOMAIN,dnms.getui.com,REJECT,extended-matching,pre-matching
 DOMAIN,ido.getui.net,REJECT,extended-matching,pre-matching
 DOMAIN,sdk-conf.getui.com,REJECT,extended-matching,pre-matching
 DOMAIN,sdk-open-phone.getui.com,REJECT,extended-matching,pre-matching
+DOMAIN,ido.gepush.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,mobileservice.cn,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,getui.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,igexin.com,REJECT,extended-matching,pre-matching
@@ -300,6 +301,8 @@ DOMAIN,adx-sg-req.bridgeoos.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,bridgeoos.com,REJECT,extended-matching,pre-matching
 # 海南丽声影视文化传播有限公司
 DOMAIN,ad-evods.tianya.tv,REJECT,extended-matching,pre-matching
+# 杭州推啊网络科技有限公司
+DOMAIN,adx.tuia.cn,REJECT,extended-matching,pre-matching
 
 [URL Rewrite]
 # 拼多多广告平台
