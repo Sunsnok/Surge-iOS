@@ -6,7 +6,7 @@
 #!tag=去广告
 #!loon_version=3.2.1(749)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
-#!date=2024-11-05 08:18:38
+#!date=2024-11-15 15:45:15
 
 [Rule]
 # Outlook
@@ -111,7 +111,6 @@ DOMAIN,open-pixon.ads-pixiv.net,REJECT,extended-matching,pre-matching
 
 # QQ钱包广告 //m.qianbao.qq.com
 ^https:\/\/m\.qianbao\.qq\.com\/services\/walletHome\/getQQshopData\? data-type=text data="{}" status-code=200
-
 ^https:\/\/m\.qianbao\.qq\.com\/services\/walletHome\/getGameData\? data-type=text data="{}" status-code=200
 
 # QQ钱包公益广告
@@ -169,14 +168,10 @@ DOMAIN,open-pixon.ads-pixiv.net,REJECT,extended-matching,pre-matching
 
 # 猫眼 - 移除开屏广告、红包悬浮
 ^https:\/\/p0\.pipi\.cn\/(adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.jpg\?imageMogr2\/quality\/ data-type=text data="{}" status-code=200
-
 ^https:\/\/p0\.pipi\.cn\/(adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.(jpg|png)\?imageMogr2\/thumbnail\/(860x0|!165x165|!1049x1169) data-type=text data="{}" status-code=200
 
 # 站酷 - 开屏广告
 ^https:\/\/api\.zcool\.com\.cn\/v\d\.\d\.\d/common\/open-screen data-type=text data="{}" status-code=200
-
-# 下厨房 - 开屏广告
-^https:\/\/api\.xiachufang\.com\/v2\/ad\/ data-type=text data="{}" status-code=200
 
 # 懒饭 - 开屏广告
 ^https:\/\/lanfanapp\.com\/api\/v1\/ads\/ data-type=text data="{}" status-code=200
