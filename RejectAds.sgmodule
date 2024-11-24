@@ -6,9 +6,7 @@
 
 [Rule]
 # 十分重要
-DOMAIN,iacc.qq.com,DIRECT
-DOMAIN,tcipark.com,DIRECT
-DOMAIN,www.tcxrcsyy.com,DIRECT
+
 # 防止TG加载转圈
 IP-CIDR,95.161.76.100/31,REJECT-NO-DROP,no-resolve
 
