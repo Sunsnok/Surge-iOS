@@ -1,0 +1,9 @@
+# DOMAIN,dns.weixin.qq.com:443
+# DOMAIN,dns.weixin.qq.com:8080
+# DOMAIN,dns.weixin.qq.com:80
+# > Safari 防跳转
+# DOMAIN,app-site-association.cdn-apple.com
+
+DOMAIN,iacc.qq.com
+DOMAIN,tcipark.com
+DOMAIN,www.tcxrcsyy.com
