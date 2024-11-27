@@ -80,7 +80,7 @@ IP-CIDR,95.161.76.100/31,REJECT-NO-DROP,no-resolve
 ^https?:\/\/gateway\.shouqiev\.com\/fsda\/app\/bootImage\.json data-type=text data=" " status-code=200
 
 # > bishengke
-^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/apphome\/apphome data-type=text data=" " status-code=200
+# ^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/apphome\/apphome data-type=text data=" " status-code=200
 
 # > beikezhaofang
 ^https?:\/\/apps\.api\.ke\.com\/config\/config\/(bootpage|getactivityconfig) data-type=text data=" " status-code=200
@@ -394,9 +394,8 @@ https://fbchina.flipchina.cn/v2/ad/query/* data-type=text data=" " status-code=2
 ^https?:\/\/switch\.jumpvg\.com\/jump\/(getlaunchad|recommend\/ad_conf) data-type=text data=" " status-code=200
 
 # > kfc
-^https?:\/\/res.kfc.com.cn\/advertisement\/ data-type=text data=" " status-code=200
-
-https://dynamicad.kfc.com.cn/api/app5/homepage/ai/popup data-type=text data=" " status-code=200
+# ^https?:\/\/res.kfc.com.cn\/advertisement\/ data-type=text data=" " status-code=200
+# https://dynamicad.kfc.com.cn/api/app5/homepage/ai/popup data-type=text data=" " status-code=200
 
 # > kuaikan
 ^https?:\/\/api.kkmh.com\/v\d\/(ad|advertisement)\/ data-type=text data=" " status-code=200
@@ -534,7 +533,7 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 ^https?:\/\/comicapi\.manhuashe\.com\/v\d\/(ads\/adstrategys|public\/startupactivity) data-type=text data=" " status-code=200
 
 # > maidanglao
-^https?:\/\/api\.mcd\.cn\/bff\/portal\/(richpop|home\/splash) data-type=text data=" " status-code=200
+# ^https?:\/\/api\.mcd\.cn\/bff\/portal\/(richpop|home\/splash) data-type=text data=" " status-code=200
 
 # > merit
 ^https?:\/\/api\.merach\.com\/app\/AppAdvertisingController\/getAdvert data-type=text data=" " status-code=200
