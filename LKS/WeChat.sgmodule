@@ -162,10 +162,10 @@ http-response-jq ^https:\/\/rms\.meituan\.com\/api\/v1\/rmsmina\/c\/queryShopPor
 ^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/marketingEntrance\/info$ data-type=text data="{}" status-code=200
 
 # 必胜客 res.pizzahut.com.cn
-^https:\/\/res\.pizzahut\.com\.cn\/CRM data-type=text data="{}" status-code=200
+# ^https:\/\/res\.pizzahut\.com\.cn\/CRM data-type=text data="{}" status-code=200
 
 # 麦当劳 api.mcd.cn
-^https:\/\/api\.mcd\.cn\/bff\/portal\/home\/hotActivity data-type=text data="{}" status-code=200
+# ^https:\/\/api\.mcd\.cn\/bff\/portal\/home\/hotActivity data-type=text data="{}" status-code=200
 
 # 星巴克 3pp.starbucks.com.cn
 ^https:\/\/3pp\.starbucks\.com\.cn\/wxmem\/popup data-type=text data="{}" status-code=200
