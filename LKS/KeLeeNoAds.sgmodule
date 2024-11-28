@@ -2,11 +2,11 @@
 #!desc=可莉自用的广告过滤器
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/KeLee.png
-#!category=iKeLee
+#!category=BetaModule
 #!tag=去广告
-#!loon_version=3.2.1(749)
+#!loon_version=3.2.4(787)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
-#!date=2024-11-15 15:45:15
+#!date=2024-11-28 00:00:00
 
 [Rule]
 # Outlook
@@ -69,9 +69,9 @@ DOMAIN,open-pixon.ads-pixiv.net,REJECT,extended-matching,pre-matching
 ^http:\/\/img\.allahall\.com\/img\/6\/90585d9e96c73dd49644af57d8501624\.jpg - reject
 ^http:\/\/img\.allahall\.com\/img\/5\/6cb2aa237ce1f65944aa1ecb29fbdeef\.jpg - reject
 ^http:\/\/img\.allahall\.com\/img\/59\/6a13a75dfe46ebfdac96bd27ef098885\.jpg - reject
-# 拼多多 //api.pinduoduo.com, api.yangkeduo.com
+# 拼多多 //api.pinduoduo.com,api.yangkeduo.com
 ^https:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - reject
-# 闲鱼 //gw.alicdn.com, acs.m.taobao.com
+# 闲鱼 //gw.alicdn.com,acs.m.taobao.com
 ^https:\/\/gw\.alicdn\.com\/mt\/ - reject
 ^https:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} - reject
 ^https:\/\/gw\.alicdn\.com\/tps\/.+\d{3,4}-\d{4} - reject
@@ -95,22 +95,33 @@ DOMAIN,open-pixon.ads-pixiv.net,REJECT,extended-matching,pre-matching
 
 # 小米
 ^https?:\/\/api\.m\.mi\.com\/v\d\/app\/start data-type=text data=" " status-code=200
+
 ^https?:\/\/api\.jr\.mi\.com\/v\d\/adv\/ data-type=text data=" " status-code=200
+
 ^https?:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen data-type=text data=" " status-code=200
+
 ^https?:\/\/api-mifit.+?\.huami\.com\/discovery\/mi\/discovery\/.+?_ad\? data-type=text data=" " status-code=200
+
 ^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/homepage_ad\? data-type=tiny-gif status-code=200
+
 ^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/sleep_ad\? data-type=tiny-gif status-code=200
+
 ^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/sport_summary_ad\? data-type=tiny-gif status-code=200
+
 ^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/sport_training_ad\? data-type=tiny-gif status-code=200
+
 ^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/step_detail_ad\? data-type=tiny-gif status-code=200
+
 ^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/training_video_ad\? data-type=tiny-gif status-code=200
 
 # 小米有品
 ^https:\/\/shopapi\.io\.mi\.com\/mtop\/mf\/resource\/homePage\/pageConfig data-type=text data=" " status-code=200
+
 ^http:\/\/app\.zhoudamozi\.com\/ad\/.+ data-type=text data=" " status-code=200
 
 # QQ钱包广告 //m.qianbao.qq.com
 ^https:\/\/m\.qianbao\.qq\.com\/services\/walletHome\/getQQshopData\? data-type=text data="{}" status-code=200
+
 ^https:\/\/m\.qianbao\.qq\.com\/services\/walletHome\/getGameData\? data-type=text data="{}" status-code=200
 
 # QQ钱包公益广告
@@ -146,12 +157,17 @@ DOMAIN,open-pixon.ads-pixiv.net,REJECT,extended-matching,pre-matching
 # 深圳通
 ^https?:\/\/ecard\.shenzhentong\.com\/wxweb\/bwxppub2\/QryAdvertList\.do data-type=text data=" " status-code=200
 
-# 埋堆堆 @Kuraki //sfo.mddcloud.com.cn, mob.mddcloud.com.cn, toblog.ctobsnssdk.com, t-dsp.pinduoduo.com, mobads-pre-config.cdn.bcebos.com, sdk1xyajs.data.kuiniuca.com, conf-darwin.xycdn.com, *.ubixioe.com
+# 埋堆堆 @Kuraki //sfo.mddcloud.com.cn,mob.mddcloud.com.cn,toblog.ctobsnssdk.com,t-dsp.pinduoduo.com,mobads-pre-config.cdn.bcebos.com,sdk1xyajs.data.kuiniuca.com,conf-darwin.xycdn.com,*.ubixioe.com
 ^https?:\/\/mob\.mddcloud\.com\.cn\/adApi\/advert\/(first|third)part\/advertList data-type=text data="{}" status-code=200
+
 ^https?:\/\/t-dsp\.pinduoduo\.com data-type=text data=" " status-code=200
+
 ^https?:\/\/mobads-pre-config\.cdn\.bcebos\.com\/preload\.php data-type=text data=" " status-code=200
+
 ^http?:\/\/sfo\.mddcloud\.com\.cn\/api\/v2\/sfo\/popup_displays? data-type=text data="{}" status-code=200
+
 ^https?:\/\/toblog\.ctobsnssdk\.com data-type=text data=" " status-code=200
+
 ^https?:\/\/conf-darwin\.xycdn\.com data-type=text data="{}" status-code=200
 
 # 闲鱼 - 开屏广告
@@ -168,6 +184,7 @@ DOMAIN,open-pixon.ads-pixiv.net,REJECT,extended-matching,pre-matching
 
 # 猫眼 - 移除开屏广告、红包悬浮
 ^https:\/\/p0\.pipi\.cn\/(adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.jpg\?imageMogr2\/quality\/ data-type=text data="{}" status-code=200
+
 ^https:\/\/p0\.pipi\.cn\/(adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.(jpg|png)\?imageMogr2\/thumbnail\/(860x0|!165x165|!1049x1169) data-type=text data="{}" status-code=200
 
 # 站酷 - 开屏广告
