@@ -2,16 +2,16 @@
 #!desc=移除京东开屏广告，精简我的页面产品推广。
 #!author=RuCu6[https://github.com/RuCu6]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/JD.png
-#!category=iKeLee
+#!category=BetaModule
 #!openUrl=https://apps.apple.com/app/id414245413
 #!tag=去广告
-#!loon_version=3.2.1(749)
+#!loon_version=3.2.4(787)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
-#!date=2024-04-21 15:41:21
+#!date=2024-11-28 00:00:00
 
 [Rule]
 DOMAIN,dns.jd.com,REJECT,extended-matching,pre-matching
-URL-REGEX,^http:\/\/\w{32}\.jddebug\.com\/diagnose\?,REJECT,extended-matching
+URL-REGEX,"^http:\/\/\w{32}\.jddebug\.com\/diagnose\?",REJECT,extended-matching
 IP-CIDR,101.124.19.122/32,REJECT,no-resolve,pre-matching
 IP-CIDR6,2402:db40:5100:1011::5/128,REJECT,no-resolve,pre-matching
 
