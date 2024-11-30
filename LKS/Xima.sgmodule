@@ -10,6 +10,7 @@
 #!date=2024-11-29 13:42:49
 
 [Rule]
+IP-CIDR,114.114.114.114/32,REJECT,no-resolve,pre-matching
 # 广告下发
 DOMAIN,adse.ximalaya.com,REJECT,extended-matching,pre-matching
 DOMAIN,adse.wsa.ximalaya.com,REJECT,extended-matching,pre-matching
