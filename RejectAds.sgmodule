@@ -8,7 +8,7 @@
 # 十分重要 wechat屏蔽热更新
 DOMAIN,dl.wechat.com,REJECT
 DOMAIN,dldir1.qq.com,REJECT
-DOMAIN,dldir1v6.qq.com,REJECT
+# DOMAIN,dldir1v6.qq.com,REJECT
 # 防止TG加载转圈
 IP-CIDR,95.161.76.100/31,REJECT-NO-DROP,no-resolve
 
