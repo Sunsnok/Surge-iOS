@@ -80,13 +80,13 @@ http-response-jq ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? 'delpa
 移除开屏广告 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(?:brand\/list|event\/list2|list|show), script-path=https://kelee.one/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=true
 
 # 移除首页推荐广告
-移除首页推荐广告 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index, script-path=https://kelee.one/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=true
+# 移除首页推荐广告 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index, script-path=https://kelee.one/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=true
 
 # 精简首页顶部标签
 精简首页顶部标签 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/show\/tab\/v2\?, script-path=https://kelee.one/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=true
 
 # 移除热搜广告
-移除热搜广告 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square\?, script-path=https://kelee.one/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=true
+# 移除热搜广告 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square\?, script-path=https://kelee.one/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=true
 
 # 移除观影页广告
 移除观影页广告 = type=http-response, pattern=^https:\/\/api\.bilibili\.com\/pgc\/page\/(?:bangumi|cinema\/tab), script-path=https://kelee.one/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=true
