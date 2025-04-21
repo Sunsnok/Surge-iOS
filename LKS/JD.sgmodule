@@ -20,8 +20,8 @@ IP-CIDR6,2402:db40:5100:1011::5/128,REJECT,no-resolve,pre-matching
 
 [Script]
 移除京东广告 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), script-path=https://kelee.one/Resource/Script/JD/JD_remove_ads.js, requires-body=true
-捕获令牌 = type=http-response, pattern=^https?:\/\/apapia-sqk-weblogic\.manmanbuy\.com\/baoliao\/center\/menu$, script-path=https://kelee.one/Resource/Script/JD/JD_Price.js, requires-body=true, timeout=10
-京东比价 = type=http-response, pattern=^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html, script-path=https://kelee.one/Resource/Script/JD/JD_Price.js, requires-body=true, timeout=10
+捕获令牌 = type=http-response, pattern=^https?:\/\/apapia-sqk-weblogic\.manmanbuy\.com\/baoliao\/center\/menu$, script-path=https://kelee.one/Resource/Script/JD/JD_Price.js, requires-body=true, timeout=60
+京东比价 = type=http-response, pattern=^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html, script-path=https://kelee.one/Resource/Script/JD/JD_Price.js, requires-body=true, timeout=60
 
 [MITM]
 hostname = %APPEND% api.m.jd.com, in.m.jd.com, apapia-sqk-weblogic.manmanbuy.com
