@@ -5,6 +5,7 @@ DOMAIN-SUFFIX,t-mobile.com
 DOMAIN-SUFFIX,mintmobile.com
 DOMAIN-SUFFIX,ultra.me
 DOMAIN-SUFFIX,ultramobile.com
+DOMAIN-SUFFIX,amplitude.com
 
 # Wifi Calling
 DOMAIN,epdg.epc.mnc240.mcc310.pub.3gppnetwork.org
