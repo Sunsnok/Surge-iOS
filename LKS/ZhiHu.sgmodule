@@ -7,18 +7,18 @@
 #!category=BetaModule
 #!loon_version=3.2.4(787)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
-#!date=2025-04-04 19:38:19
+#!date=2025-05-13 15:17:08
 
 [Rule]
-DOMAIN,appcloud.zhihu.com,REJECT
-DOMAIN,appcloud2.in.zhihu.com,REJECT
-DOMAIN,crash2.zhihu.com,REJECT
-DOMAIN,mqtt.zhihu.com,REJECT
-DOMAIN,sugar.zhihu.com,REJECT
-DOMAIN,zxid-m.mobileservice.cn,REJECT
-IP-CIDR,103.41.167.237/32,REJECT,no-resolve
-IP-CIDR,118.89.204.198/32,REJECT,no-resolve
-IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT,no-resolve
+DOMAIN,appcloud.zhihu.com,REJECT,extended-matching,pre-matching
+DOMAIN,appcloud2.in.zhihu.com,REJECT,extended-matching,pre-matching
+DOMAIN,crash2.zhihu.com,REJECT,extended-matching,pre-matching
+DOMAIN,mqtt.zhihu.com,REJECT,extended-matching,pre-matching
+DOMAIN,sugar.zhihu.com,REJECT,extended-matching,pre-matching
+DOMAIN,zxid-m.mobileservice.cn,REJECT,extended-matching,pre-matching
+IP-CIDR,103.41.167.237/32,REJECT,no-resolve,pre-matching
+IP-CIDR,118.89.204.198/32,REJECT,no-resolve,pre-matching
+IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT,no-resolve,pre-matching
 
 [URL Rewrite]
 ^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card - reject
@@ -97,4 +97,4 @@ http-response-jq ^https:\/\/api\.zhihu\.com\/questions\/\d+(?:\/answers|\/feeds|
 拦截服务器推送配置 config all = type=http-response, pattern=^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/zhihu\/config\/all\?, script-path=https://kelee.one/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% *.zhihu.com
+hostname = %APPEND% api.zhihu.com, appcloud2.zhihu.com, link.zhihu.com, m-cloud.zhihu.com, page-info.zhihu.com, www.zhihu.com, zhuanlan.zhihu.com
