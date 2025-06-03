@@ -1,3 +1,12 @@
+#!name=小宇宙去广告
+#!desc=过滤小宇宙应用内广告及开屏广告
+#!author=RuCu6[https://github.com/RuCu6]
+#!category=BetaModule
+#!tag=去广告
+#!loon_version=3.2.4(787)
+#!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
+#!date=2025-5-7 00:00:00
+
 [Map Local]
 # 开屏广告
 ^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/flash- data-type=text data="{}" status-code=200 header="Content-Type:application/json"
