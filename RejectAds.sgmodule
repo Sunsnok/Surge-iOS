@@ -5,14 +5,21 @@
 #!source=Rules@hututu0 | Xiaohongshu@ddgksf2013 | Amap@kokoryh | Cainiao@Keywos | Weibo@Rucu6 | Zhihu@Rucu6 | Tools@ScriptHub
 
 [Rule]
-# 十分重要 wechat屏蔽热更新
-# DOMAIN,dl.wechat.com,REJECT
-# DOMAIN,dldir1.qq.com,REJECT
-# DOMAIN,dldir1v6.qq.com,REJECT
 # 防止TG加载转圈
 IP-CIDR,95.161.76.100/31,REJECT-NO-DROP,no-resolve
 
 [URL Rewrite]
+# -------- Block HTTPDNS ---------
+^https?:\/\/203\.107\.1\.1/\d+/ss - reject
+^https?:\/\/203\.107\.1\.33/\d+/ss - reject
+^https?:\/\/203\.107\.1\.66/\d+/ss - reject
+^https?:\/\/203\.107\.1\.67/\d+/ss - reject
+^https?:\/\/203\.107\.1\.97/\d+/ss - reject
+^https?:\/\/2401:b180:2000:30::1c\/\d+\/d - reject
+^https?:\/\/2401:b180:2000:20::10\/\d+\/d - reject
+^https?:\/\/cdn\.wup\.huya\.com\/monitor\/monitor\.jsp - reject
+^https:\/\/gslbali\.ximalaya\.com\/linkeye-cloud\/httpdns\/ - reject
+
 # ----------- Eleme -----------
 ^https:\/\/elemecdn.com\/.+\/sitemap - reject
 ^https:\/\/fuss10.elemecdn.com\/.+\/w\/640\/h\/\d{3,4} - reject
@@ -21,6 +28,10 @@ IP-CIDR,95.161.76.100/31,REJECT-NO-DROP,no-resolve
 ^https:\/\/www1.elecfans.com\/www\/delivery - reject
 
 [Map Local]
+# -------- Block HTTPDNS ---------
+^https?:\/\/appconf\.mail\.163\.com\/mailmaster\/api\/http\/urlConfig\.do$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/msglb\.91160\.com\/msg\/outer\/broker\/get$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
 # ----------- Meituan -----------
 ^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data-type=text data="{}" status-code=200
 ^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg data-type=text data="{}" status-code=200
