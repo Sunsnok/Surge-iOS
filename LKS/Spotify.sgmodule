@@ -1,13 +1,13 @@
-#!name=Spotify去广告
+#!name=Spotify去广告 歌词增强
 #!desc=移除播放广告，恢复歌手和专辑列表的正常展示。修改插件自定义配置项需要重新登陆方可生效。
 #!author=001ProMax[https://github.com/001ProMax]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Spotify.png
 #!category=BetaModule
 #!openUrl=https://apps.apple.com/app/id324684580
-#!tag=去广告
+#!tag=去广告 功能增强
 #!loon_version=3.2.4(787)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
-#!date=2025-06-08 03:40:18
+#!date=2025-06-08 03:40:18  2025-05-13 15:17:08
 
 [Rule]
 AND,((DOMAIN,spclient.wg.spotify.com,extended-matching),(PROTOCOL,QUIC)),REJECT
@@ -21,5 +21,19 @@ AND,((DOMAIN,spclient.wg.spotify.com,extended-matching),(PROTOCOL,QUIC)),REJECT
 [Script]
 Protobuf处理 = type=http-response, pattern=^https:\/\/.+\.spotify\.com(:443)?\/(?:bootstrap|user-customization-service), script-path=https://kelee.one/Resource/Script/Spotify/Spotify_remove_ads.js, requires-body=true, binary-body-mode=true, timeout=10, argument="[{tab},{useractivity}]"
 
+跟踪响应·JSON = type=http-response, pattern=^https?:\/\/api\.spotify\.com\/v1\/tracks\?, script-path=https://kelee.one/Resource/Script/Spotify/Spotify_response.js, requires-body=true
+
+歌词请求·JSON = type=http-request, pattern=^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json, script-path=https://kelee.one/Resource/Script/Spotify/Spotify_request.js, requires-body=true
+
+歌词请求·Proto = type=http-request, pattern=^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*), script-path=https://kelee.one/Resource/Script/Spotify/Spotify_request.js, requires-body=true, binary-body-mode=true
+
+翻译歌词响应·JSON = type=http-response, pattern=^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json(.*)subtype=Translate, script-path=https://kelee.one/Resource/Script/Spotify/Translate_response.js, requires-body=true
+
+翻译歌词响应·Proto = type=http-response, pattern=^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*)subtype=Translate, script-path=https://kelee.one/Resource/Script/Spotify/Translate_response.js, requires-body=true, binary-body-mode=true
+
+外部歌词响应·JSON = type=http-response, pattern=^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json(.*)subtype=External, script-path=https://kelee.one/Resource/Script/Spotify/External_Lyrics_response.js, requires-body=true
+
+外部歌词响应·Proto = type=http-response, pattern=^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*)subtype=External, script-path=https://kelee.one/Resource/Script/Spotify/External_Lyrics_response.js, requires-body=true, binary-body-mode=true
+
 [MITM]
-hostname = %APPEND% *.spotify.com
+hostname = %APPEND% *.spotify.com, api.spotify.com, spclient.wg.spotify.com
