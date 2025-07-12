@@ -19,21 +19,21 @@ AND,((DOMAIN,spclient.wg.spotify.com,extended-matching),(PROTOCOL,QUIC)),REJECT
 ^https:\/\/.+\.spotify\.com\/pendragon\/ data-type=text data="{}" status-code=200
 
 [Script]
-Protobuf处理 = type=http-response, pattern=^https:\/\/.+\.spotify\.com(:443)?\/(?:bootstrap|user-customization-service), script-path=https://kelee.one/Resource/Script/Spotify/Spotify_remove_ads.js, requires-body=true, binary-body-mode=true, timeout=10, argument="[{tab},{useractivity}]"
+Protobuf处理 = type=http-response, pattern=^https?:\/\/(?:gae2-spclient|guc3-spclient|spclient\.wg)\.spotify\.com(?::443)?\/(?:bootstrap|user-customization-service), script-path=https://kelee.one/Resource/JavaScript/Spotify/Spotify_remove_ads.js, requires-body=true, binary-body-mode=true, timeout=5, argument="[{tab},{useractivity}]"
 
-跟踪响应·JSON = type=http-response, pattern=^https?:\/\/api\.spotify\.com\/v1\/tracks\?, script-path=https://kelee.one/Resource/Script/Spotify/Spotify_response.js, requires-body=true
+跟踪响应·JSON = type=http-response, pattern=^https?:\/\/api\.spotify\.com\/v1\/tracks\?, script-path=https://kelee.one/Resource/JavaScript/Spotify/Spotify_response.js, requires-body=true
 
-歌词请求·JSON = type=http-request, pattern=^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json, script-path=https://kelee.one/Resource/Script/Spotify/Spotify_request.js, requires-body=true
+歌词请求·JSON = type=http-request, pattern=^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json, script-path=https://kelee.one/Resource/JavaScript/Spotify/Spotify_request.js, requires-body=true
 
-歌词请求·Proto = type=http-request, pattern=^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*), script-path=https://kelee.one/Resource/Script/Spotify/Spotify_request.js, requires-body=true, binary-body-mode=true
+歌词请求·Proto = type=http-request, pattern=^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*), script-path=https://kelee.one/Resource/JavaScript/Spotify/Spotify_request.js, requires-body=true, binary-body-mode=true
 
-翻译歌词响应·JSON = type=http-response, pattern=^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json(.*)subtype=Translate, script-path=https://kelee.one/Resource/Script/Spotify/Translate_response.js, requires-body=true
+翻译歌词响应·JSON = type=http-response, pattern=^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json(.*)subtype=Translate, script-path=https://kelee.one/Resource/JavaScript/Spotify/Translate_response.js, requires-body=true
 
-翻译歌词响应·Proto = type=http-response, pattern=^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*)subtype=Translate, script-path=https://kelee.one/Resource/Script/Spotify/Translate_response.js, requires-body=true, binary-body-mode=true
+翻译歌词响应·Proto = type=http-response, pattern=^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*)subtype=Translate, script-path=https://kelee.one/Resource/JavaScript/Spotify/Translate_response.js, requires-body=true, binary-body-mode=true
 
-外部歌词响应·JSON = type=http-response, pattern=^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json(.*)subtype=External, script-path=https://kelee.one/Resource/Script/Spotify/External_Lyrics_response.js, requires-body=true
+外部歌词响应·JSON = type=http-response, pattern=^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json(.*)subtype=External, script-path=https://kelee.one/Resource/JavaScript/Spotify/External_Lyrics_response.js, requires-body=true
 
-外部歌词响应·Proto = type=http-response, pattern=^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*)subtype=External, script-path=https://kelee.one/Resource/Script/Spotify/External_Lyrics_response.js, requires-body=true, binary-body-mode=true
+外部歌词响应·Proto = type=http-response, pattern=^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*)subtype=External, script-path=https://kelee.one/Resource/JavaScript/Spotify/External_Lyrics_response.js, requires-body=true, binary-body-mode=true
 
 [MITM]
 hostname = %APPEND% *.spotify.com, api.spotify.com, spclient.wg.spotify.com
