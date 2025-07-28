@@ -1,6 +1,17 @@
 # > @Sunsnok edited
 # > 遇到T-Mobile相关连接问题请将本规则走代理
 # > 注：1.代理线路需支持UDP 2.最好为美国线路IPLC
+# Ultra Mobile / T-Mobile Wi-Fi Calling & IMS相关
+DOMAIN-SUFFIX,vowifi
+DOMAIN-SUFFIX,ims
+DOMAIN-SUFFIX,tmobile
+DOMAIN-SUFFIX,tmoapps.net
+DOMAIN-SUFFIX,tmocache.com
+DOMAIN-SUFFIX,mobile.att.net
+DOMAIN-SUFFIX,epdg.epc
+DOMAIN-SUFFIX,3gppnetwork.org
+DOMAIN-SUFFIX,fast.t-mobile.com
+
 DOMAIN-SUFFIX,t-mobile.com
 DOMAIN-SUFFIX,mintmobile.com
 DOMAIN-SUFFIX,ultra.me
