@@ -11,30 +11,17 @@
 #!date=2025-03-23 22:21:51
 
 [Rule]
-DOMAIN,afd.baidu.com,REJECT,extended-matching,pre-matching
-DOMAIN,mobads.baidu.com,REJECT,extended-matching,pre-matching
-DOMAIN,180.76.76.200,REJECT,extended-matching,pre-matching
-IP-CIDR,180.76.76.200/32,REJECT,no-resolve,pre-matching
+RULE-SET,https://raw.githubusercontent.com/app2smile/rules/master/rule/tieba-ad.list,REJECT-DROP
 
 [Map Local]
 ^https:\/\/tiebac\.baidu\.com\/c\/f\/search\/discover data-type=text data="{}" status-code=200
-
 ^https:\/\/tiebac\.baidu\.com\/c\/f\/forum\/forumGuide data-type=text data="{}" status-code=200
-
 ^https:\/\/tiebac\.baidu\.com\/c\/u\/chat\/getChatSubscriptionList data-type=text data="{}" status-code=200
 
 [Script]
-清理首页 = type=http-response, pattern=^https:\/\/tiebac\.baidu\.com\/livefeed\/feed, script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js, requires-body=true
+贴吧json = type=http-response,pattern=^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/(s\/sync|f\/(frs\/(page|threadlist|generalTabList)|pb\/(pic)?page|excellent\/personalized))$|tiebaads\/commonbatch\?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js,script-update-interval=0
 
-清理侧拉抽屉 = type=http-response, pattern=^https:\/\/tiebac\.baidu\.com\/c\/f\/sidebar\/home, script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js, requires-body=true
-
-清理我的页面 = type=http-response, pattern=^https:\/\/tiebac\.baidu\.com\/c\/u\/user\/profile, script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js, requires-body=true
-
-清理首页 = type=http-response, pattern=^https:\/\/tieba\.baidu\.com\/c\/f\/frs\/frsBottom, script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js, requires-body=true
-
-JSON处理 = type=http-response, pattern=^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$), script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js, requires-body=true, timeout=10
-
-Proto处理 = type=http-response, pattern=^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd, script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js, requires-body=true, binary-body-mode=true, timeout=10
+贴吧proto = type=http-response,pattern=^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd,requires-body=1,binary-body-mode=1,max-size=-1,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js,argument=per_filter_video_thread={{{per_filter_video}}}
 
 [MITM]
 hostname = %APPEND% tiebac.baidu.com, tieba.baidu.com
