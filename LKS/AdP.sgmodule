@@ -6,7 +6,7 @@
 #!tag=去广告
 #!loon_version=3.2.4(787)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
-#!date=2025-10-09 12:38:02
+#!date=2025-10-26 01:24:37
 
 [Rule]
 AND,((DOMAIN-KEYWORD,tnc),(OR,((DOMAIN-SUFFIX,capcutapi.com),(DOMAIN-SUFFIX,zijieapi.com),(DOMAIN-SUFFIX,isnssdk.com),(DOMAIN-SUFFIX,toutiaoapi.com),(DOMAIN-SUFFIX,bytedance.com),(DOMAIN-SUFFIX,snssdk.com),(DOMAIN-SUFFIX,sgsnssdk.com)))),DIRECT
@@ -197,7 +197,7 @@ DOMAIN-SUFFIX,api.touch-moblie.com,REJECT
 DOMAIN,mercury-gateway.ixiaochuan.cn,REJECT
 DOMAIN,adapi.izuiyou.com,REJECT
 DOMAIN-SUFFIX,domob.cn,REJECT
-DOMAIN-SUFFIX,1rtb.com,REJECT
+DOMAIN-SUFFIX,adwangmai.com,REJECT
 DOMAIN-SUFFIX,bxsnews.com,REJECT
 DOMAIN-SUFFIX,tradplusad.com,REJECT
 DOMAIN-SUFFIX,fancyapi.com,REJECT
