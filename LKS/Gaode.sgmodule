@@ -10,10 +10,9 @@
 #!date=2025-09-04 23:46:49
 
 [Rule]
-AND,((URL-REGEX,"^http:\/\/.+\/amdc\/mobileDispatch"),(USER-AGENT,"AMapiPhone*")),REJECT
-DOMAIN,amap-aos-info-nogw.amap.com,REJECT
-DOMAIN,free-aos-cdn-image.amap.com,REJECT
-DOMAIN-SUFFIX,v.smtcdns.com,REJECT
+DOMAIN,amap-aos-info-nogw.amap.com,REJECT,extended-matching,pre-matching
+DOMAIN,free-aos-cdn-image.amap.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,v.smtcdns.com,REJECT,extended-matching,pre-matching
 
 [Body Rewrite]
 http-response-jq ^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\? 'delpaths([["data","commonMaterial"]])'
