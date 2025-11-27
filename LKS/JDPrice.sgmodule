@@ -3,10 +3,6 @@
 #!author=wf021325[https://github.com/wf021325],githubdulong[https://github.com/githubdulong],mw418[https://github.com/mw418]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/JD.png
 #!category=BetaModule
-#!openUrl=https://apps.apple.com/app/id414245413
-#!tag=功能增强
-#!loon_version=3.2.4(787)
-#!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
 #!date=2025-04-22 00:22:22
 #!arguments=MMMCK_SCRIPT:慢慢买CK
 #!arguments-desc=[参数设置]\n1. MMMCK_SCRIPT:慢慢买CK 脚本前往慢慢买App获取Cookie\n2.避免不必要的重写，禁用请设置为"#"
