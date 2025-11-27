@@ -2,6 +2,7 @@
 #!desc=移除各部分广告，移除知乎安全中心跳转，建议卸载知乎重新安装。如遇安全中心页面移除失败的，请积极反馈。
 #!author=@ddgksf2013, @blackmatrix7, @paynexss
 #!category=AD Block
+#!date=2025-10-14
 
 [URL Rewrite]
 ^https?:\/\/.*zhihu\.com\/ad-style-service\/request - reject
