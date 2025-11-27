@@ -1,23 +1,25 @@
 #!name=小宇宙去广告
 #!desc=过滤小宇宙应用内广告及开屏广告
-#!author=RuCu6[https://github.com/RuCu6]
-#!category=BetaModule
+#!author=@ddgksf2013
+#!category=AD Block
 #!tag=去广告
-#!loon_version=3.2.4(787)
-#!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
-#!date=2025-07-21 18:21:13
+#!date=2025-09-26
 
 [Body Rewrite]
-http-response-jq ^https:\/\/api\.xiaoyuzhoufm\.com\/v1\/discovery-feed\/list '.data |= map(select(.type != "DISCOVERY_HEADER" and .type != "DISCOVERY_BANNER"))'
+http-response-jq ^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/discovery-feed\/list '.data |= map(select(.type != "DISCOVERY_BANNER"))'
 
 [Map Local]
-^https:\/\/api\.xiaoyuzhoufm\.com\/v\d\/flash data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+# > 搜索推广@ddgksf2013
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/search\/get-express data-type=text data=" " status-code=200
 
-^https:\/\/api\.xiaoyuzhoufm\.com\/v\d\/ai data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+# > 搜索填词@ddgksf2013
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/search\/get-preset data-type=text data=" " status-code=200
 
-^https:\/\/api\.xiaoyuzhoufm\.com\/v\d\/search\/get data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+# > 搜索建议@ddgksf2013
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/category\/list-daily-suggestion data-type=text data=" " status-code=200
 
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/category data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+# > 开屏广告@ddgksf2013
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/flash-screen\/list data-type=text data=" " status-code=200
 
 [MITM]
-hostname = %APPEND% api.xiaoyuzhoufm.com
+hostname = %APPEND% api.xiaoyuzhoufm.com, 118.31.123.175, 112.124.203.116, 118.31.125.171, 47.57.181.112, 47.57.182.96
