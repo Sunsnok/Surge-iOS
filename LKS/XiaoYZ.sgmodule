@@ -2,7 +2,6 @@
 #!desc=过滤小宇宙应用内广告及开屏广告
 #!author=@ddgksf2013
 #!category=AD Block
-#!tag=去广告
 #!date=2025-09-26
 
 [Body Rewrite]
