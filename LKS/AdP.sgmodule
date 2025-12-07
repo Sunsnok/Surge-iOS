@@ -3,7 +3,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Website_icon/120px/TencentAd.png
 #!category=🚫 AD Block
-#!date=2025-11-20 01:25:54
+#!date=2025-11-28 03:45:41
 
 [Rule]
 AND,((DOMAIN-KEYWORD,tnc,extended-matching),(OR,((DOMAIN-SUFFIX,capcutapi.com,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching),(DOMAIN-SUFFIX,isnssdk.com,extended-matching),(DOMAIN-SUFFIX,toutiaoapi.com,extended-matching),(DOMAIN-SUFFIX,bytedance.com,extended-matching),(DOMAIN-SUFFIX,snssdk.com,extended-matching),(DOMAIN-SUFFIX,sgsnssdk.com,extended-matching)))),DIRECT
@@ -118,7 +118,24 @@ DOMAIN-SUFFIX,l.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,imtmp.net,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,ugdtimg.com,REJECT,extended-matching,pre-matching
 IP-CIDR,47.110.187.87/32,REJECT,no-resolve,pre-matching
+DOMAIN-SUFFIX,opadlink.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,staevent.work,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,openinstall.online,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,statchannel.store,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,oplinking.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,deepinstall.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,openinstall.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,installtongji.top,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,openlink.cc,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,opstatistics.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,installtongji.online,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,statschannel.xyz,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,staevent.xyz,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,opstatistics.cn,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,openinstall.top,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,openinstall.io,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,statsinstall.xyz,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,statchannel.top,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,getui.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,getui.net,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,igexin.com,REJECT,extended-matching,pre-matching
@@ -254,6 +271,9 @@ DOMAIN-SUFFIX,ad.xelements.cn,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,adsrvr.cn,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,adsrvr.org,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,fancydsp.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,xcultur.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,bayescom.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,etoolads.cn,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,tradplusad.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,fancyapi.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,medproad.com,REJECT,extended-matching,pre-matching
@@ -275,6 +295,7 @@ DOMAIN-SUFFIX,rayjump.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,rixengine.com,REJECT,extended-matching,pre-matching
 
 [URL Rewrite]
+ad.aggrxinc.com, - reject
 ^https:\/\/video-dsp\.pddpic\.com\/market-dsp-video\/ - reject
 ^https:\/\/t-dsp\.pinduoduo\.com\/dspcb\/i\/mrk_ - reject
 ^https:\/\/images\.pinduoduo\.com\/mrk\/ - reject
