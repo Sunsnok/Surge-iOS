@@ -3,7 +3,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Website_icon/120px/TencentAd.png
 #!category=🚫 AD Block
-#!date=2025-11-28 03:45:41
+#!date=2025-12-05 00:50:43
 
 [Rule]
 AND,((DOMAIN-KEYWORD,tnc,extended-matching),(OR,((DOMAIN-SUFFIX,capcutapi.com,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching),(DOMAIN-SUFFIX,isnssdk.com,extended-matching),(DOMAIN-SUFFIX,toutiaoapi.com,extended-matching),(DOMAIN-SUFFIX,bytedance.com,extended-matching),(DOMAIN-SUFFIX,snssdk.com,extended-matching),(DOMAIN-SUFFIX,sgsnssdk.com,extended-matching)))),DIRECT
@@ -234,6 +234,20 @@ DOMAIN-SUFFIX,maplehaze.cn,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,lnk0.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,bridgeoos.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,anythinktech.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,birdgesdk.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,toponadss.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,bridgeoos.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,anyrtb.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,anythinktech.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,combocn.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,beanxin.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,letway.cn,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,newitai.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,fireluck.cn,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,setway.cn,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,artcto.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,wayio.cn,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,iaddata.com,REJECT,extended-matching,pre-matching
 DOMAIN,ad-evods.tianya.tv,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,tuia.cn,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,66mobi.com,REJECT,extended-matching,pre-matching
@@ -264,7 +278,6 @@ DOMAIN-SUFFIX,domob.cn,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,adwangmai.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,bxsnews.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,ranfenghd.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,mmstat.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,miaozhen.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,qchannel01.cn,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,ad.xelements.cn,REJECT,extended-matching,pre-matching
