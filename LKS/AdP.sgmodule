@@ -3,7 +3,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Website_icon/120px/TencentAd.png
 #!category=🚫 AD Block
-#!date=2025-12-19 23:34:15
+#!date=2026-01-02 04:31:12
 
 [Rule]
 AND,((DOMAIN-KEYWORD,tnc,extended-matching),(OR,((DOMAIN-SUFFIX,capcutapi.com,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching),(DOMAIN-SUFFIX,isnssdk.com,extended-matching),(DOMAIN-SUFFIX,toutiaoapi.com,extended-matching),(DOMAIN-SUFFIX,bytedance.com,extended-matching),(DOMAIN-SUFFIX,snssdk.com,extended-matching),(DOMAIN-SUFFIX,sgsnssdk.com,extended-matching)))),DIRECT
@@ -286,6 +286,9 @@ DOMAIN-SUFFIX,fancydsp.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,xcultur.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,bayescom.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,etoolads.cn,REJECT,extended-matching,pre-matching
+DOMAIN,ad.aggrxinc.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,mentamob.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,advlion.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,tradplusad.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,fancyapi.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,medproad.com,REJECT,extended-matching,pre-matching
@@ -307,7 +310,6 @@ DOMAIN-SUFFIX,rayjump.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,rixengine.com,REJECT,extended-matching,pre-matching
 
 [URL Rewrite]
-ad.aggrxinc.com, - reject
 ^https:\/\/video-dsp\.pddpic\.com\/market-dsp-video\/ - reject
 ^https:\/\/t-dsp\.pinduoduo\.com\/dspcb\/i\/mrk_ - reject
 ^https:\/\/images\.pinduoduo\.com\/mrk\/ - reject
@@ -315,3 +317,4 @@ ad.aggrxinc.com, - reject
 
 [MITM]
 hostname = %APPEND% video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com
+
