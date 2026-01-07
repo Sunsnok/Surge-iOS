@@ -3,7 +3,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], VirgilClyne[https://github.com/VirgilClyne]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/HTTPDNS.png
 #!category=🚫 AD Block
-#!date=2025-11-23 22:49:40
+#!date=2025-12-29 17:33:55
 
 [Rule]
 DOMAIN,yyapp-httpdns.gslb.yy.com,REJECT,extended-matching,pre-matching
@@ -86,6 +86,7 @@ DOMAIN,httpdns.alicdn.com,REJECT,extended-matching,pre-matching
 DOMAIN,httpdns-api.aliyuncs.com,REJECT,extended-matching,pre-matching
 DOMAIN,httpdns-sc.aliyuncs.com,REJECT,extended-matching,pre-matching
 IP-CIDR,203.107.1.0/24,REJECT,no-resolve,pre-matching
+DOMAIN,ucdc.upaas.quark.cn,REJECT,extended-matching,pre-matching
 DOMAIN,httpdns.danuoyi.tbcache.com,REJECT,extended-matching,pre-matching
 DOMAIN,httpdns.cctv.com,REJECT,extended-matching,pre-matching
 DOMAIN,httpdns-browser.platform.dbankcloud.cn,REJECT,extended-matching,pre-matching
@@ -193,3 +194,4 @@ URL-REGEX,"^http:\/\/139\.196\.12\.179:8053\/httpdns\/",REJECT,extended-matching
 
 [MITM]
 hostname = %APPEND% 203.107.1.1, 203.107.1.33, 203.107.1.66, 203.107.1.67, 203.107.1.97, 2401:b180:2000:30::1c, 2401:b180:2000:20::10, amdc.alipay.com, appconf.mail.163.com, msglb.91160.com
+
