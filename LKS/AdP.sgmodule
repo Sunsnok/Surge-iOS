@@ -3,7 +3,7 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Website_icon/120px/TencentAd.png
 #!category=🚫 AD Block
-#!date=2026-01-30 00:13:33
+#!date=2026-03-01 04:51:41
 
 [Rule]
 AND,((DOMAIN-KEYWORD,tnc,extended-matching),(OR,((DOMAIN-SUFFIX,capcutapi.com,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching),(DOMAIN-SUFFIX,isnssdk.com,extended-matching),(DOMAIN-SUFFIX,toutiaoapi.com,extended-matching),(DOMAIN-SUFFIX,bytedance.com,extended-matching),(DOMAIN-SUFFIX,snssdk.com,extended-matching),(DOMAIN-SUFFIX,sgsnssdk.com,extended-matching)))),DIRECT
@@ -257,7 +257,6 @@ DOMAIN,app-analytics-services.com,REJECT,extended-matching,pre-matching
 DOMAIN,odm.app-ads-services.com,REJECT,extended-matching,pre-matching
 DOMAIN,firebaselogging-pa.googleapis.com,REJECT,extended-matching,pre-matching
 DOMAIN,firebaseinappmessaging.googleapis.com,REJECT,extended-matching,pre-matching
-DOMAIN,firebaseremoteconfig.googleapis.com,REJECT,extended-matching,pre-matching
 DOMAIN,fundingchoicesmessages.google.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,doubleclick.net,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,doubleclick-cn.net,REJECT,extended-matching,pre-matching
@@ -291,6 +290,7 @@ DOMAIN,ad.aggrxinc.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,mentamob.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,advlion.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,shanghailingye.cn,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,shenshiads.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,tradplusad.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,fancyapi.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,medproad.com,REJECT,extended-matching,pre-matching
@@ -319,3 +319,5 @@ DOMAIN-SUFFIX,rixengine.com,REJECT,extended-matching,pre-matching
 
 [MITM]
 hostname = %APPEND% video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com
+
+
