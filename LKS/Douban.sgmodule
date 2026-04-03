@@ -19,4 +19,5 @@
 ^https:\/\/frodo\.douban\.com\/api\/v\d\/search\/found_words data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [MITM]
-hostname = %APPEND% api.douban.com, frodo.douban.com, m.douban.com
+hostname = %APPEND% api.douban.com, m.douban.com
+# frodo.douban.com
