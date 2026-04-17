@@ -2,25 +2,25 @@
 # > 遇到T-Mobile相关连接问题请将本规则走代理
 # > 注：1.代理线路需支持UDP 2.最好为美国线路IPLC
 # Ultra Mobile / T-Mobile Wi-Fi Calling & IMS相关
-DOMAIN-SUFFIX,vowifi
-DOMAIN-SUFFIX,ims
-DOMAIN-SUFFIX,tmobile
-DOMAIN-SUFFIX,tmoapps.net
-DOMAIN-SUFFIX,tmocache.com
-DOMAIN-SUFFIX,mobile.att.net
-DOMAIN-SUFFIX,epdg.epc
-DOMAIN-SUFFIX,3gppnetwork.org
-DOMAIN-SUFFIX,fast.t-mobile.com
+DOMAIN-SUFFIX,vowifi,force-remote-dns
+DOMAIN-SUFFIX,ims,force-remote-dns
+DOMAIN-SUFFIX,tmobile,force-remote-dns
+DOMAIN-SUFFIX,tmoapps.net,force-remote-dns
+DOMAIN-SUFFIX,tmocache.com,force-remote-dns
+DOMAIN-SUFFIX,mobile.att.net,force-remote-dns
+DOMAIN-SUFFIX,epdg.epc,force-remote-dns
+DOMAIN-SUFFIX,3gppnetwork.org,force-remote-dns
+DOMAIN-SUFFIX,fast.t-mobile.com,force-remote-dns
 
-DOMAIN-SUFFIX,t-mobile.com
-DOMAIN-SUFFIX,mintmobile.com
-DOMAIN-SUFFIX,ultra.me
-DOMAIN-SUFFIX,ultramobile.com
-DOMAIN-SUFFIX,amplitude.com
-DOMAIN-SUFFIX,jibecloud.net
+DOMAIN-SUFFIX,t-mobile.com,force-remote-dns
+DOMAIN-SUFFIX,mintmobile.com,force-remote-dns
+DOMAIN-SUFFIX,ultra.me,force-remote-dns
+DOMAIN-SUFFIX,ultramobile.com,force-remote-dns
+DOMAIN-SUFFIX,amplitude.com,force-remote-dns
+DOMAIN-SUFFIX,jibecloud.net,force-remote-dns
 
 # Wifi Calling
-DOMAIN,epdg.epc.mnc240.mcc310.pub.3gppnetwork.org
-DOMAIN,epdg.epc.mnc260.mcc310.pub.3gppnetwork.org //通过UDP 4500端口实现VoWifi
-DOMAIN,ss.epdg.epc.mnc260.mcc310.pub.3gppnetwork.org
-DOMAIN,ss.epdg.epc.geo.mnc260.mcc310.pub.3gppnetwork.org
+DOMAIN,epdg.epc.mnc240.mcc310.pub.3gppnetwork.org,force-remote-dns
+DOMAIN,epdg.epc.mnc260.mcc310.pub.3gppnetwork.org,force-remote-dns //通过UDP 4500端口实现VoWifi
+DOMAIN,ss.epdg.epc.mnc260.mcc310.pub.3gppnetwork.org,force-remote-dns
+DOMAIN,ss.epdg.epc.geo.mnc260.mcc310.pub.3gppnetwork.org,force-remote-dns
