@@ -2,7 +2,7 @@
 #!desc=移除各部分广告，移除知乎安全中心跳转，建议卸载知乎重新安装。如遇安全中心页面移除失败的，请积极反馈。
 #!author=@ddgksf2013, @blackmatrix7, @paynexss, @可莉
 #!category=AD Block
-#!date=2026-05-17
+#!date=2026-05-18 21:02:53
 
 [Body Rewrite]
 http-response-jq ^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/zhihu\/config\/all\? 'def drop_keys: {"km_httpdns_new_config_tars":true,"preFetchHttpDns":true,"httpdns_detector_use_concurrent":true,"httpdns_use_memory_cache":true,"httpdns_new_config_tars":true,"coreNetworkConf_useTars":true,"km_coreNetworkConf_useTars":true,"sugarQuicConfig":true,"quic_dns_detect_enable":true,"quicMixAB":true,"quic_downgrade_enable":true,"quic_priority_strategy":true,"quic_check_health_enable":true,"tquic_configuration":true,"networkExprimentList":true,"tars_ab_list":true,"zaSetExtraRequestHeader":true}; .data.configs |= map(select((drop_keys[.configKey]// false) | not) | if (.configValue | type) == "object" then del(.configValue.delayHttpdns, .configValue.dnsParser, .configValue.HTTPDNS) else . end)'
@@ -11,10 +11,11 @@ http-response-jq ^https:\/\/api\.zhihu\.com\/topstory\/recommend\? '.data |= map
 http-response-jq ^https:\/\/api\.zhihu\.com\/questions\/\d+\/feeds\? 'delpaths([["ad_info"]])'
 http-response-jq ^https:\/\/api\.zhihu\.com\/answers\/v\d\/ 'delpaths([["third_business"]])'
 http-response-jq ^https:\/\/api\.zhihu\.com\/articles\/v\d\/\d+$ 'delpaths([["third_business"]])'
+http-response-jq ^https:\/\/page-info\.zhihu\.com\/articles\/v\d\/\d+$ '.structured_content.segments |= (if type == "array" then map(select(.type != "card")) else . end)'
 http-response-jq ^https:\/\/api\.zhihu\.com\/answers\/v\d\/ '.structured_content.segments |= map(select(.type != "card"))'
 http-response-jq ^https:\/\/api\.zhihu\.com\/articles\/v\d\/\d+\? '.structured_content.segments |= map(select(.type != "card"))'
 http-response-jq ^https:\/\/api\.zhihu\.com\/comment_v\d\/answers\/\d+\/root_comment\? 'delpaths([["atmosphere_voting_config"]])'
-http-response-jq ^https:\/\/api\.zhihu\.com\/comment_v\\/pins\/\d+\/root_comment\? 'delpaths([["atmosphere_voting_config"]])'
+http-response-jq ^https:\/\/api\.zhihu\.com\/comment_v\/pins\/\d+\/root_comment\? 'delpaths([["atmosphere_voting_config"]])'
 http-response-jq ^https:\/\/api\.zhihu\.com\/comment_v\d\/answers\/\d+\/list-headers$ 'delpaths([["continuous_consumption_module"]])'
 http-response-jq ^https:\/\/page-info\.zhihu\.com\/answers\/v\d\/\d+$ 'delpaths([["third_business"]])'
 http-response-jq ^https:\/\/page-info\.zhihu\.com\/\/v\d\/\d$ 'delpaths([["third_business"]])'
