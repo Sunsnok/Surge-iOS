@@ -1,17 +1,14 @@
 #!name=IT之家去广告
 #!desc=过滤IT之家信息流广告和文末广告，自定义移除置顶和轮播图，自定义移除项需在插件配置。
-#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!author=奶思https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/rewrite.snippet
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/IThome.png
 #!category=AD Block
-#!date=2025-12-01 01:25:27
-#!arguments=removePinnedArticles:false,removeAllBanners:false
-
-[URL Rewrite]
-^https?:\/\/dat\.ruanmei\.com\/ithome\/money\/acd\.json$ - reject
+#!date=2026-6-1
 
 [Script]
-IT之家去广告 = type=http-response, pattern=^https:\/\/napi\.ithome\.com\/api\/(news\/indexv2\/iphone\/\d+|topmenu\/getfeeds\?), script-path=https://kelee.one/Resource/JavaScript/IThome/IThome_remove_ads.js, requires-body=true, argument="[{{{removeAllBanners}}},{{{removePinnedArticles}}}]"
+ithome = type=http-response, pattern=^https?:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ithome/ithome.js, requires-body=true, max-size=-1, timeout=60
+
+ithome = type=http-response, pattern=^https?:\/\/napi\.ithome\.com\/api\/news\/indexv2\/iphone\/927, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ithome/ithome.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
-hostname = %APPEND% napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com
-
+hostname = %APPEND% napi.ithome.com
