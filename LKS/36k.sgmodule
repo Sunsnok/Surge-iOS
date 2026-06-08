@@ -2,11 +2,11 @@
 #!desc=移除开屏广告、首页右上角运营位、信息流广告、文末广告，移除相关文章推荐、大家都在看及皮肤配置，精简搜索页面、我的页面及底栏。
 #!author=可莉
 #!category=AD Block
-#!date=2026-05-15 01:42:13
+#!date=2026-06-01 17:11:35
 
 [Rule]
-DOMAIN,adx.36kr.com,REJECT
-DOMAIN,ad.jiemian.com,REJECT
+DOMAIN,adx.36kr.com,REJECT,extended-matching,pre-matching
+DOMAIN,ad.jiemian.com,REJECT,extended-matching,pre-matching
 
 [Body Rewrite]
 http-response-jq ^https:\/\/gateway\.36kr\.com\/api\/mis\/sys\/config\? 'delpaths([["data","contentConfig"]])'
