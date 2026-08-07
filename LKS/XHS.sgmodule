@@ -3,7 +3,7 @@
 #!author=RuCu6[https://github.com/RuCu6],fmz200[https://github.com/fmz200]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/RedPaper.png
 #!category=AD Block
-#!date=2026-05-13 18:12:29
+#!date=2026-06-01 17:11:35
 
 [Rule]
 AND,((PROTOCOL,QUIC),(DOMAIN-SUFFIX,xiaohongshu.com,extended-matching)),REJECT
