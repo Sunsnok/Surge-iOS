@@ -2,7 +2,6 @@
 # Apple Intelligence
 
 DOMAIN-SUFFIX,apps.mzstatic.com
-
 # DOMAIN-SUFFIX, gateway.icloud.com
 DOMAIN-SUFFIX, apple-relay.apple.com
 DOMAIN-SUFFIX, apple-relay.fastly-edge.com
@@ -15,3 +14,12 @@ DOMAIN-SUFFIX, assistant.apple.com
 DOMAIN-SUFFIX, smoot.apple.com
 DOMAIN-SUFFIX, apple-relay.akamaized.net
 DOMAIN-SUFFIX, apple-relay.mask.apple-dns.net
+
+DOMAIN,mask-api.fe.apple-dns.net
+DOMAIN,mask-api.icloud.com
+DOMAIN,mask-t.apple-dns.net
+DOMAIN,mask.apple-dns.net
+DOMAIN-SUFFIX,ls.apple.com
+DOMAIN-SUFFIX,mask-h2.icloud.com
+DOMAIN-SUFFIX,mask.icloud.com
+DOMAIN-KEYWORD,siri
