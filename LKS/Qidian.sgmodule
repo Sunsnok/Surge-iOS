@@ -69,4 +69,4 @@ qidian-hide-daily = type=http-response,pattern=^https:\/\/magev6\.if\.qidian\.co
 ^https:\/\/qdclient-resources-1252317822\.image\.myqcloud\.com\/images\/checkin\/.*\.png data-type=text data="" status-code=200 header="Content-Type:image/png"
 
 [MITM]
-hostname = %APPEND% magev6.if.qidian.com, ywab.reader.qq.com, qdclient-resources-1252317822.image.myqcloud.comhostname = %APPEND% magev6.if.qidian.com, ywab.reader.qq.com
+hostname = %APPEND% magev6.if.qidian.com, ywab.reader.qq.com, qdclient-resources-1252317822.image.myqcloud.com
